@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# production
+build
+
+#db
+dbConfig.js
+
+# misc
+.DS_Store
+npm-debug.log
+package.json.info-port
+notes-to-self

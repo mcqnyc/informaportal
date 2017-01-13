@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box; 
+}
+
+
+/* section styling - creates boxes around content from apis */
+
+section {
+  padding: 1rem 1rem;
+  margin: 0.5rem auto;
+  border: 1px solid #333;
+  border-radius: 18px;
+  height: 38rem;
+  overflow: auto;
+}
+
+/* section styling height override for authentication pages (login.html & signup.html) */
+.auth {
+  height: 16rem;
+}
+
+/* styling for bottom navbar */
+
+/*#bootstrap-overrides {*/
+.channels {
+  /*column-count: 4;
+  column-width: 150px;*/
+  columns: 4 150px;
+  column-gap: 3rem;
+  column-rule: 1px solid #ccc;
+  /*column-fill: balance;*/
+  column-fill: auto;
+}
+
+.channels h3 {
+  column-span: all;
+}
+
+/* section styling height override for footer-nav with Channels */
+.footer-nav {
+  height: 23rem;
+}
+
