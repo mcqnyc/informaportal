@@ -24,7 +24,7 @@ const rootRoute = {
   indexRoute: {
     getComponent (location, cb){
       require.ensure([], (error) => {
-        cb(null, require('./Landing'))
+        cb(null, require('./Layout'))
       })
     }
   },
