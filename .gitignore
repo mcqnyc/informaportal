@@ -2,7 +2,8 @@
 node_modules
 
 # production
-build
+public/bundle.js
+
 
 #db
 dbConfig.js
