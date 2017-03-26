@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
@@ -18,15 +18,18 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   enforce: 'pre',
+      //   test: /\.js$/,
+      //   loader: 'eslint-loader',
+      //   exclude: /node_modules/
+      // },
       {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
-      },
-      {
-        include: path.resolve(__dirname, 'client'),
-        test: /\.js$/,
+        include: [
+          path.resolve(__dirname, 'client'),
+          path.resolve(__dirname, 'components'),
+        ],
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader'
       }
       // ,
@@ -44,4 +47,4 @@ module.exports = {
       // }
     ]
   }
-}
+};

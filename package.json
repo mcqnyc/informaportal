@@ -4,7 +4,7 @@
   "description": "An application that presents information from different APIs in one place using React on the front-end.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint client/**/*.js webpack.config.js",
+    "lint": "eslint client/**/*.js client/**/*.jsx webpack.config.js",
     "build": "webpack",
     "watch": "webpack --watch",
     "commit": "git-cz"
