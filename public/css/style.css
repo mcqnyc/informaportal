@@ -3,6 +3,21 @@
 }
 
 
+/* ------------------------- */
+/* NAVBAR */
+/* ------------------------- */ 
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+
+
+
+
+
 /* section styling - creates boxes around content from apis */
 
 section {
