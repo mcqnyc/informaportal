@@ -1,15 +1,15 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './js/BrowserEntry.jsx',
+  entry: './client/ClientApp.js',
+  devtool: 'eval',
   output: {
     path: path.join(__dirname, '/public'),
-    filename: 'bundle.js',
-    publicPath: '/public/'
+    filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.json']
   },
   stats: {
     colors: true,
@@ -17,11 +17,31 @@ module.exports = {
     chunks: true
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
+        include: path.resolve(__dirname, 'client'),
+        test: /\.js$/,
         loader: 'babel-loader'
       }
+      // ,
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         url: false
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   }
 }

@@ -1,45 +1,31 @@
-require('babel-register');
-
 const express = require('express');
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
-const ReactRouter = require('react-router');
-const match = ReactRouter.match;
-const RouterContext = ReactRouter.RouterContext;
-const ReactRedux = require('react-redux');
-const Provider = ReactRedux.Provider;
-const Store = require('./js/Store.jsx');
-const store = Store.store;
-const _ = require('lodash');
-const fs = require('fs');
-const port = 1339;
-const baseTemplate = fs.readFileSync('./index.html');
-const template = _.template(baseTemplate);
-const ClientApp = require('./js/ClientApp.jsx');
-const Routes = ClientApp.Routes;
-
 const app = express();
+const port = process.env.PORT ||  1339;
+
+const morgan       = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser   = require('body-parser');
+const session      = require('express-session');
+
+app.use(morgan('dev')); // log every request to the console
+// app.use(cookieParser()); // read cookies (needed for auth)
+// app.use(bodyParser.urlencoded({ extended: true })); // get information from html forms
+
+// required for passport
+// app.use(session({ secret: 'scotch' })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
+// app.use(flash()); // use connect-flash for flash messages stored in session
+
+// routes ======================================================================
+// require('./server/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+
 
 app.use('/public', express.static('./public'));
-
-app.use((req, res) => {
-  match({ routes: Routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message)
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    } else if (renderProps) {
-      const body = ReactDOMServer.renderToString(
-        React.createElement(Provider, {store},
-          React.createElement(RouterContext, renderProps)
-        )
-      )
-      res.status(200).send(template({ body }))
-    } else {
-      res.status(404).send('Not found')
-    }
-  })
+app.all('/*', function(req, res, next) {
+    res.sendFile('index.html', { root: __dirname });
 });
 
-console.log('listening on port ' + port);
+
 app.listen(port);
+console.log('listening on port ' + port);

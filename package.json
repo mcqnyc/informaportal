@@ -4,17 +4,28 @@
   "description": "An application that presents information from different APIs in one place using React on the front-end.",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard",
-    "watch": "webpack --watch",
+    "lint": "eslint client/**/*.js webpack.config.js",
     "build": "webpack",
+    "watch": "webpack --watch",
     "commit": "git-cz"
   },
   "author": "mcqnyc",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-config-standard-jsx": "^3.3.0",
+    "eslint-config-standard-react": "^4.3.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-standard": "^2.1.1",
     "express": "^4.14.0",
+    "express-session": "^1.15.1",
     "lodash": "^4.17.4",
+    "morgan": "^1.8.1",
     "node-ensure": "0.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -30,7 +41,7 @@
     "commitizen": "^2.9.5",
     "cz-conventional-changelog": "^1.2.0",
     "semistandard": "*",
-    "webpack": "^1.14.0"
+    "webpack": "^2.3.2"
   },
   "config": {
     "commitizen": {
