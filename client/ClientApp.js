@@ -1,37 +1,32 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from '../components/Header.jsx';
+import Landing from '../components/Landing.jsx';
+import Login from '../components/Login.jsx';
+import Signup from '../components/Signup.jsx';
 import Footer from '../components/Footer.jsx';
-import DataViewport from '../components/DataViewport.jsx';
-import VideoViewport from '../components/VideoViewport.jsx';
+
 // import '../public/css/reset.css';
 // import '../public/css/style.css';
 
 const App = React.createClass({
   render () {
     return (
-      <div className="app">
+      <BrowserRouter>
+        <div className="app">
 
-        <Header />
+          <Header />
 
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-4">
-              <VideoViewport />
-            </div>
-            <div className="col-sm-4">
-              <DataViewport />
-            </div>
-            <div className="col-sm-4">
-              <DataViewport />
-            </div>
-          </div>
+          <Route exact path="/" component={Landing} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          
+
+          <Footer />
+
         </div>
-
-
-        <Footer />
-
-      </div>
+      </BrowserRouter>
     );
   }
 });
