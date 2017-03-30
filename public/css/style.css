@@ -61,6 +61,16 @@ section {
 }
 
 
+/* ---- Loaders ---- */
+
+.cylon div {
+  margin: 8px auto 0;
+  padding: 4px;
+  border: 2px dotted MediumVioletRed;
+  border-radius: 50%;
+}
+
+
 /* ------------------------- */
 /* NAVBAR */
 /* ------------------------- */ 

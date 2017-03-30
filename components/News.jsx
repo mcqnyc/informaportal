@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import preload from '../testNewsData.json';
+import Loader from './Loader.jsx';
 import Pager from 'react-pager';
 
 class News extends React.Component {
@@ -10,8 +10,9 @@ class News extends React.Component {
     this.handlePageChanged = this.handlePageChanged.bind(this);
 
     this.state = {
-      data: preload,
-      total: preload.length * 0.2,
+      data: [],
+      loading: true,
+      total: 10,
       currentPage: 0,
       visiblePages: 3,
     };
@@ -21,9 +22,41 @@ class News extends React.Component {
     this.setState({ currentPage: newPage });
   }
 
+  componentDidMount () {
+
+    const myInit = { 
+      method: 'GET',
+      mode: 'cors',
+      cache: 'default'
+    };
+
+    fetch('https://content.guardianapis.com/search?section=fashion&order-by=newest&page-size=50&q=business&api-key=7df519db-080e-4ab3-98fe-a36d60896d5c', { myInit })
+      .then((response) => {
+        if(response.ok){
+          return response.json()
+        }
+        throw new Error('Network response was not ok.');
+      })
+      .then((response) => {
+        this.setState({data: response.response.results, loading: false});
+      })
+      .catch((error) => {
+        console.error('this is a fetch error', error);
+    });
+  }
+
   render () {
 
+    if(this.state.loading){
+      return (
+        <section className="news-api">
+          <Loader />
+        </section>
+      )
+    }
+
     const { data, currentPage, visiblePages } = this.state;
+
     // Logic for displaying news items
     const itemsPerPage = 5;
     let indexOfFirstItem = currentPage;

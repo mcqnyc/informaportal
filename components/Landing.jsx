@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import News from '../components/News.jsx';
-import VideoViewport from '../components/VideoViewport.jsx';
+import News from './News.jsx';
+import VideoViewport from './VideoViewport.jsx';
 
 class Landing extends React.Component {
   render () {
