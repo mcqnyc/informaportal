@@ -8,6 +8,7 @@ class News extends React.Component {
     super(props);
 
     this.handlePageChanged = this.handlePageChanged.bind(this);
+    this.getTheNews = this.getTheNews.bind(this);
 
     this.state = {
       data: [],
@@ -22,8 +23,12 @@ class News extends React.Component {
     this.setState({ currentPage: newPage });
   }
 
-  componentDidMount () {
+  getTheNews(e) {
+    e.preventDefault();
+    this.componentDidMount();
+  }
 
+  componentDidMount () {
     const myInit = { 
       method: 'GET',
       mode: 'cors',
@@ -67,7 +72,7 @@ class News extends React.Component {
       <section className="news-api">
         <div className="news-button-group">
           <h5>Fashion News</h5>
-          <button id="get-news-button" className="btn btn-primary">Get the news</button>
+          <button id="get-news-button" className="btn btn-primary" onClick={this.getTheNews} >Get the news</button>
         </div>
         <ul id="news-content">
           {currentItems.map((item) => {
@@ -80,7 +85,7 @@ class News extends React.Component {
           total={this.state.total}
           current={this.state.currentPage}
           visiblePages={this.state.visiblePages}
-          titles={{ first: '<|', last: '>|' }}
+          titles={{ first: '|<', last: '>|' }}
           className="pagination-sm pull-right"
           onPageChanged={this.handlePageChanged}
         />

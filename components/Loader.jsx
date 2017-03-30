@@ -1,7 +1,7 @@
 import React from 'react';
 import Loading from 'react-loading';
 
-let Loader = React.createClass({
+const Loader = React.createClass({
   render: function() {
     return (
       <div className="cylon">

@@ -23,8 +23,10 @@ section {
 
 
 /* ---- Pagination ---- */
+
 .pagination {
   margin: 1px 0;
+  box-shadow: 1px 1.5px 1px #656565;
 }
 
 .pagination ul {
@@ -117,7 +119,7 @@ section {
 }
 
 .news-api {
-  padding-bottom: 13px;
+  padding-bottom: 35px;
 }
 
 #news-content {
