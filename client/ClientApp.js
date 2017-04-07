@@ -1,22 +1,35 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Header from '../components/Header.jsx';
+import Landing from '../components/Landing.jsx';
+import Login from '../components/Login.jsx';
+import Signup from '../components/Signup.jsx';
 import Footer from '../components/Footer.jsx';
+
 // import '../public/css/reset.css';
 // import '../public/css/style.css';
+
+// change this to be an ES6 class, 
+// don't leave it like this, not even to show that you know how to use it
 
 const App = React.createClass({
   render () {
     return (
-      <div className='app'>
-      <Header />
-        <div className='landing'>
-          <h1>Omnichanne1</h1>
-          <input type='text' placeholder='Search' />
-          <a>or Browse All</a>
+      <BrowserRouter>
+        <div className="app">
+
+          <Header />
+
+          <Route exact path="/" component={Landing} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Redirect to="/" />
+
+          <Footer />
+
         </div>
-      <Footer />
-      </div>
+      </BrowserRouter>
     );
   }
 });

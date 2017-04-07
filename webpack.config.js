@@ -25,6 +25,10 @@ module.exports = {
       //   exclude: /node_modules/
       // },
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         include: [
           path.resolve(__dirname, 'client'),
           path.resolve(__dirname, 'components'),
