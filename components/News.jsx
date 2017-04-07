@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import Loader from './Loader.jsx';
 import Pager from 'react-pager';
 
@@ -25,6 +25,7 @@ class News extends React.Component {
 
   getTheNews(e) {
     e.preventDefault();
+    console.log('getTheNews button clicked')
     this.componentDidMount();
   }
 
@@ -70,6 +71,7 @@ class News extends React.Component {
 
     return (
       <section className="news-api">
+
         <div className="news-button-group">
           <h5>Fashion News</h5>
           <button id="get-news-button" className="btn btn-primary" onClick={this.getTheNews} >Get the news</button>

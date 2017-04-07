@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import News from './News.jsx';
-import VideoViewport from './VideoViewport.jsx';
+import YouTube from './YouTube.jsx';
 
 class Landing extends React.Component {
   render () {
@@ -9,15 +9,12 @@ class Landing extends React.Component {
       <div className="container">
         <div className="row">
           
-          <div className="col-sm-4">
-            <VideoViewport />
+          <div className="col-sm-6">
+            <YouTube />
           </div>
           
-          <div className="col-sm-4">
-            <News />
-          </div>
-          
-          <div className="col-sm-4">
+        
+          <div className="col-sm-6">
             <News />
           </div>
 
