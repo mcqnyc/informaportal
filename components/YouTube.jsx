@@ -73,20 +73,16 @@ class YouTube extends React.Component {
     return (
       <section className="youtube-api">
         <h5>Watch YouTube</h5>
-        {/* <div className="input-group">*/}
-          {/* <span className="input-group-btn"> */}
-            <form onSubmit={this.handleSubmit}>
-              <input type="text" placeholder="Search for something..." className="form-control" value={this.state.searchTerm} onChange={this.handleSearchTermChange} />
-              <input type="submit" className="btn btn-primary form-control" value="Search" />
-            </form>
-          {/* </span> */}
-        {/* </div>*/}
+          <form onSubmit={this.handleSubmit}>
+            <input type="text" placeholder="Search for something..." className="form-control" value={this.state.searchTerm} onChange={this.handleSearchTermChange} />
+            <input type="submit" className="btn btn-primary form-control" value="Search" />
+          </form>
         <div id="youtube-results"></div>
           {this.state.data.map((item) => {
             return (
               <div className="item" key={item.id.videoId} >
                   <h5>{item.snippet.title}</h5>
-                  <iframe className="video" src={`http://www.youtube.com/embed/${item.id.videoId}`} frameBorder="0" allowFullScreen></iframe>
+                  <iframe className="video" src={`https://www.youtube.com/embed/${item.id.videoId}`} frameBorder="0" allowFullScreen></iframe>
               </div>
             );
           })}
