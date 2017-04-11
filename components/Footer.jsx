@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render () {
     return (
       <div className="container">
-        <section className="footer-nav">
+        <section className="footer-nav col-2">
           <nav className="channels">
             <h3>Channels</h3>
             <ul>

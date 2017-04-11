@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   render () {
     return (
-    
-
         <nav className="navbar">
           <Link to="/" className="logo">Omnichanne1</Link>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -18,8 +16,6 @@ class Header extends React.Component {
             <li><a href="mailto:mcqnyc@gmail.com">Contact</a></li>
           </ul>
         </nav>
-
-        
     );
   }
 }

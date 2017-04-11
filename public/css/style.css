@@ -1,7 +1,28 @@
-* {
-    box-sizing: border-box; 
+/*
+red color: rgba(231, 76, 60,1.0);
+red color: #e74c3c;
+*/
+
+/* ------------------------- */
+/* BASIC SETUP */
+/* ------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
+body {
+  background-color: #fff;
+  color: #444;
+  font-family: Avenir, Helvetica Neue, Arial Black, sans;
+  font-size: 15px;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
 
 
 /* ------------------------- */
@@ -12,13 +33,36 @@
 
 section {
   /*display: flex;*/
-  padding: 1px 1px;
+  padding: 1px 5px;
   margin: 0.5rem auto;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   /*overflow: auto;*/
   /*max-height: 500px;*/
-  box-shadow: 1px 2px 2.5px #888888;
+  box-shadow: 1px 2px 2.5px #888;
+}
+
+
+.container {
+  margin: 0 2em;
+}
+
+/*.navbar-spacer {
+  height: 3.3em;
+}*/
+
+.row {
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-around;
+}
+
+
+.col-1,
+.col-2 {
+  min-width: 300px;
+  /*border: 2px solid #999;*/
+  flex: 1;
 }
 
 
@@ -87,17 +131,22 @@ section {
 
 /* - - - - Navbar menu toggle - - - - */
 
-.navbar-positioner {
-
+/* This .app:before entry clears the space under the floating navbar */
+.app:before {
+  content: '';
+  display: block;
+  padding-top: 3.5em;
 }
 
 .navbar {
   background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  /*box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);*/
+  box-shadow: 1px 2px 2.5px #888;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 280px;
   z-index: 3;
 }
  
@@ -201,6 +250,7 @@ section {
 
 
 /*@media (min-width: 660px) {*/
+/*@media (min-width: 768px) {*/
 @media (min-width: 48em) {
   .navbar {
     /*flex-direction: row;*/
@@ -226,6 +276,14 @@ section {
     display: none;
   }
 
+  /* API boxes expand using this */
+
+  .row {
+    flex-direction: row;  
+  }
+  .col-1 {
+    margin: 0 5px;
+  }
 
 }
 
@@ -326,7 +384,9 @@ section {
 }
 
 
-.channels h4 {
+.channels h3 {
+  padding: 10px 10px 10px 0;
+  font-size: 2em;
   -webkit-column-span: all;
      -moz-column-span: all;
           column-span: all;
@@ -337,14 +397,9 @@ section {
 .footer-nav {
   /*padding-bottom: 1em;*/
   padding: 0 1em 1em;
+  margin: 7px 5px 5px;
 }
 
-/* Add a gray background color and some padding to the footer */
-footer {
-  margin-top: 1em;
-  padding: 3em;
-  background-color: #f2f2f2;
-}
 
 /* ------------------------- */
 /* BUTTONS */
