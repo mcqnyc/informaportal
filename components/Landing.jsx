@@ -7,16 +7,18 @@ class Landing extends React.Component {
   render () {
     return (
       <div className="container">
+        <div className="navbar-spacer"></div>
+        
         <div className="row">
           
-          <div className="col-sm-6">
+          <section className="col-1">
             <YouTube />
-          </div>
+          </section>
           
         
-          <div className="col-sm-6">
+          <section className="col-1">
             <News />
-          </div>
+          </section>
 
         </div>
       </div>
