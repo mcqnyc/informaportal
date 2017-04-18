@@ -2,6 +2,10 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Loader from './Loader.jsx';
 import Pager from 'react-pager';
+import Time from 'react-time';
+import PropTypes from 'prop-types';
+
+
 
 class News extends React.Component {
   constructor(props) {
@@ -9,6 +13,7 @@ class News extends React.Component {
 
     this.handlePageChanged = this.handlePageChanged.bind(this);
     this.getTheNews = this.getTheNews.bind(this);
+    this.convertTheTimestamp = this.convertTheTimestamp.bind(this);
 
     this.state = {
       data: [],
@@ -27,6 +32,10 @@ class News extends React.Component {
     e.preventDefault();
     console.log('getTheNews button clicked')
     this.componentDidMount();
+  }
+
+  convertTheTimestamp(webPublicationDate) {
+    return new Date(webPublicationDate);
   }
 
   componentDidMount () {
@@ -71,7 +80,6 @@ class News extends React.Component {
 
     return (
       <section className="news-api">
-
         <div className="news-button-group">
           <h5>Fashion News</h5>
           <button id="get-news-button" className="btn btn-primary" onClick={this.getTheNews} >Get the news</button>
@@ -79,7 +87,7 @@ class News extends React.Component {
         <ul id="news-content">
           {currentItems.map((item) => {
             return (
-              <li key={item.id} ><Link to={item.webUrl} target="_blank">{item.webTitle}</Link></li>
+              <li key={item.id} ><Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />: <Link to={item.webUrl} target="_blank">{item.webTitle}</Link></li>
             );
           })}
         </ul>
