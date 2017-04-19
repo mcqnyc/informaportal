@@ -30,7 +30,6 @@ class News extends React.Component {
 
   getTheNews(e) {
     e.preventDefault();
-    console.log('getTheNews button clicked')
     this.componentDidMount();
   }
 
