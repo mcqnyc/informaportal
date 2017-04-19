@@ -72,7 +72,7 @@ class YouTube extends React.Component {
 
     return (
       <section className="youtube-api">
-        <h5>Watch YouTube</h5>
+        <h2>Watch YouTube</h2>
           <form onSubmit={this.handleSubmit}>
             <input type="text" placeholder="Search for something..." className="form-control" value={this.state.searchTerm} onChange={this.handleSearchTermChange} />
             <input type="submit" className="btn btn-primary form-control" value="Search" />

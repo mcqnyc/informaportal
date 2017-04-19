@@ -80,7 +80,7 @@ class News extends React.Component {
     return (
       <section className="news-api">
         <div className="news-button-group">
-          <h5>Fashion News</h5>
+          <h2>Fashion News</h2>
           <button id="get-news-button" className="btn btn-primary" onClick={this.getTheNews} >Get the news</button>
         </div>
         <ul id="news-content">
