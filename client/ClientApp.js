@@ -7,8 +7,8 @@ import Login from '../components/Login.jsx';
 import Signup from '../components/Signup.jsx';
 import Footer from '../components/Footer.jsx';
 
-// import '../public/css/reset.css';
-// import '../public/css/style.css';
+import styles from '../styles/main.css';
+import resetStyles from '../styles/reset.css';
 
 // change this to be an ES6 class, 
 // don't leave it like this, not even to show that you know how to use it
