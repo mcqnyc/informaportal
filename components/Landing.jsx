@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import News from './News.jsx';
 import YouTube from './YouTube.jsx';
 
