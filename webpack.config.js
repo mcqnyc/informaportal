@@ -32,6 +32,7 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'client'),
           path.resolve(__dirname, 'components'),
+          path.resolve(__dirname, 'containers'),
         ],
         test: /\.(js|jsx)$/,
         loader: 'babel-loader'

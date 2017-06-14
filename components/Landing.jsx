@@ -1,6 +1,7 @@
 import React from 'react';
 import News from './News.jsx';
 import YouTube from './YouTube.jsx';
+import SearchBar from '../containers/SearchBar.jsx';
 
 class Landing extends React.Component {
   render () {
@@ -16,7 +17,7 @@ class Landing extends React.Component {
           
         
           <section className="col-1">
-            <News />
+            <SearchBar />
           </section>
 
         </div>
