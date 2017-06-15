@@ -32,23 +32,23 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'client'),
           path.resolve(__dirname, 'components'),
+          path.resolve(__dirname, 'containers'),
         ],
         test: /\.(js|jsx)$/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
       }
-      // ,
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     'style-loader',
-      //     {
-      //       loader: 'css-loader',
-      //       options: {
-      //         url: false
-      //       }
-      //     }
-      //   ]
-      // }
     ]
   }
 };

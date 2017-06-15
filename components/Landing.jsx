@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import News from './News.jsx';
 import YouTube from './YouTube.jsx';
+import SearchBar from '../containers/SearchBar.jsx';
+import WeatherList from '../containers/WeatherList.jsx';
 
 class Landing extends React.Component {
   render () {
@@ -12,13 +13,14 @@ class Landing extends React.Component {
         <div className="row">
           
           <section className="col-1">
-            <YouTube />
+            <SearchBar />
+            <WeatherList />
+          </section>
+
+          <section className="col-1">
           </section>
           
         
-          <section className="col-1">
-            <News />
-          </section>
 
         </div>
       </div>

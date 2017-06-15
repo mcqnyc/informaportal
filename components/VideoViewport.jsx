@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Jun 8, this isn't being used as yet
+// i may modify it so that it's a reusable component
+
 class VideoViewport extends React.Component {
   render () {
     return (
