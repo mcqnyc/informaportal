@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import { connect, Provider, applyMiddleware } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from '../store.js';
 import Header from '../components/Header.jsx';
 import Landing from '../components/Landing.jsx';
@@ -15,22 +15,22 @@ import '../public/styles/style.css';
 export default class App extends Component {
   render () {
     return (
-  <Provider store={store}>
-      <BrowserRouter>
-        <div className="app">
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className="app">
 
-          <Header />
+            <Header />
 
-          <Route exact path="/" component={Landing} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
-          <Redirect to="/" />
+            <Route exact path="/" component={Landing} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Redirect to="/" />
 
-          <Footer />
+            <Footer />
 
-        </div>
-      </BrowserRouter>
-  </Provider>
+          </div>
+        </BrowserRouter>
+      </Provider>
     );
   }
 };
