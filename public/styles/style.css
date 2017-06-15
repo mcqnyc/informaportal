@@ -505,6 +505,26 @@ div .item h5 {
 }
 
 /* ------------------------- */
+/* WEATHER API */
+/* ------------------------- */ 
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+svg {
+  height: 100px;
+}
+
+/* this is for sizing the Google Map */
+td:first-of-type, td:first-of-type > div {
+  height: 150px;
+  width: 150px;
+}
+
+
+/* ------------------------- */
 /* NEWS API */
 /* ------------------------- */ 
 
@@ -701,14 +721,6 @@ button#load {
     display: block;
 }
 
-
-
-
-
-
-
-
-
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -765,12 +777,6 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
-
-
-
-
-
-
 
 
 .btn-primary {
