@@ -1,26 +1,54 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './js/ClientApp.js',
+  entry: './client/ClientApp.js',
+  devtool: 'eval',
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: false
+    chunks: true
   },
   module: {
-    loaders: [
+    rules: [
+      // {
+      //   enforce: 'pre',
+      //   test: /\.js$/,
+      //   loader: 'eslint-loader',
+      //   exclude: /node_modules/
+      // },
       {
-        test: /\.jsx?$/,
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        include: [
+          path.resolve(__dirname, 'client'),
+          path.resolve(__dirname, 'components'),
+        ],
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader'
       }
+      // ,
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         url: false
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   }
-}
+};
