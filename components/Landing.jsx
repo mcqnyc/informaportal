@@ -18,6 +18,7 @@ class Landing extends React.Component {
           </section>
 
           <section className="col-1">
+            <News />
           </section>
           
         
