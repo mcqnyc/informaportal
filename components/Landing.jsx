@@ -13,8 +13,7 @@ class Landing extends React.Component {
         <div className="row">
           
           <section className="col-1">
-            <SearchBar />
-            <WeatherList />
+            <YouTube />
           </section>
 
           <section className="col-1">

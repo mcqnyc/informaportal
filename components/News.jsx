@@ -68,7 +68,7 @@ class News extends React.Component {
 
     const { data, activePage } = this.state;
 
-    // Logic for displaying news items
+    // Logic for displaying paginated news items
     const itemsPerPage = 5;
     let indexOfFirstItem = (activePage - 1) * itemsPerPage;
     let indexOfLastItem = activePage * itemsPerPage;
@@ -98,7 +98,7 @@ class News extends React.Component {
           ellipsis={false}
           boundaryLinks
           items={10}
-          maxButtons={5}
+          maxButtons={6}
           activePage={this.state.activePage}
           onSelect={this.handleSelect}
         />
