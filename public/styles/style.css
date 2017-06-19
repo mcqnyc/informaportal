@@ -32,13 +32,10 @@ body {
 /* section styling - creates boxes around content from apis */
 
 section {
-  /*display: flex;*/
   padding: 1px 5px;
   margin: 0.5rem auto;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
-  /*overflow: auto;*/
-  /*max-height: 500px;*/
   box-shadow: 1px 2px 2.5px #888;
 }
 
@@ -57,7 +54,6 @@ section {
 .col-1,
 .col-2 {
   min-width: 300px;
-  /*border: 2px solid #999;*/
   flex: 1;
 }
 
@@ -101,15 +97,11 @@ a:active {
   border-radius: 4px;
 }
 
-
 .pagination > ul {
   border: 0px;
   padding: 0px;
   min-width: 266px;
 }
-
-
-
 
 .pagination > li {
   list-style: none;  
@@ -198,44 +190,6 @@ a:active {
 .pagination-sm > li:last-child > span {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-}
-.pager {
-  padding-left: 0;
-  margin: 20px 0;
-  text-align: center;
-  list-style: none;
-}
-.pager li {
-  display: inline;
-}
-.pager li > a,
-.pager li > span {
-  display: inline-block;
-  padding: 5px 14px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-}
-.pager li > a:hover,
-.pager li > a:focus {
-  text-decoration: none;
-  background-color: #eee;
-}
-.pager .next > a,
-.pager .next > span {
-  float: right;
-}
-.pager .previous > a,
-.pager .previous > span {
-  float: left;
-}
-.pager .disabled > a,
-.pager .disabled > a:hover,
-.pager .disabled > a:focus,
-.pager .disabled > span {
-  color: #777;
-  cursor: not-allowed;
-  background-color: #fff;
 }
 
 
@@ -703,22 +657,22 @@ input[type="search"] {
 /* ------------------------- */ 
 
 button#load {
-    padding: 0 3em;
-    outline: none;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 1em;
-    line-height: 4;
-    overflow: hidden;
-    border-radius: 5px;
-    background: rgba(0,0,0,0.2);
-    text-align: center;
-    cursor: pointer;
-    margin: 20px auto;
-    display: block;
+  padding: 0 3em;
+  outline: none;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1em;
+  line-height: 4;
+  overflow: hidden;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.2);
+  text-align: center;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
 }
 
 .btn {

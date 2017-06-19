@@ -98,7 +98,7 @@ class News extends React.Component {
           ellipsis={false}
           boundaryLinks
           items={10}
-          maxButtons={6}
+          maxButtons={3}
           activePage={this.state.activePage}
           onSelect={this.handleSelect}
         />
