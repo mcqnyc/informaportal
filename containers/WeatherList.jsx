@@ -6,8 +6,9 @@ import GoogleMap from '../components/GoogleMap.jsx'
 class WeatherList extends React.Component {
   renderWeather(cityData){
     const name = cityData.location.name;
-    const temps = cityData.forecast.forecastday.map(weather => weather.day.maxtemp_c);
-    const humidities = cityData.forecast.forecastday.map(weather => weather.day.avghumidity);
+    const forecasts = cityData.forecast.forecastday;
+    const temps = forecasts.map(weather => weather.day.maxtemp_c);
+    const humidities = forecasts.map(weather => weather.day.avghumidity);
     const { lon, lat } = cityData.location;
 
     return (
