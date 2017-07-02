@@ -256,11 +256,11 @@ a:active {
 
 /* - - - - Navbar menu toggle - - - - */
 
-/* This .app:before entry clears the space under the floating navbar */
+/* .app:before ensures nothing enter the space behind the floating navbar */
 .app:before {
   content: '';
   display: block;
-  padding-top: 3.5em;
+  padding-top: 3.75em;
 }
 
 .navbar {
@@ -473,10 +473,15 @@ svg {
 
 /* this is for sizing the Google Map */
 td:first-of-type, td:first-of-type > div {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
 }
 
+.weather-result-row {
+  border: 4px solid #e6e6e6;
+  border-radius: 2px;
+  box-shadow: 2px 3px 3.5px #888;
+}
 
 /* ------------------------- */
 /* NEWS API */
@@ -588,7 +593,7 @@ td:first-of-type, td:first-of-type > div {
 /* FORMS */
 /* ------------------------- */ 
 
-
+/* form control for YouTube API */
 
 .form-control {
   display: block;

@@ -11,7 +11,7 @@ class WeatherList extends React.Component {
     const { lon, lat } = cityData.city.coord;
 
     return (
-      <tr key={name}>
+      <tr key={name} className="weather-result-row">
         <td><GoogleMap lon={lon} lat={lat} /></td>
         <td><Chart data={temps} color="orange" units="&deg;C" /></td>
         <td><Chart data={humidities} color="green" units="%" /></td>
@@ -21,8 +21,8 @@ class WeatherList extends React.Component {
 
   render() {
     return (
-      <table className="table table-hover">
-        <thead>
+      <table>
+        <thead className="table table-hover">
           <tr>
             <th>City</th>
             <th>Temperature (&deg;C)</th>
