@@ -4,7 +4,11 @@ node_modules
 # production
 
 
-#db
+# performance testing
+stats.json
+
+
+# db
 dbConfig.js
 
 # misc
@@ -12,5 +16,3 @@ dbConfig.js
 npm-debug.log
 package.json.info-port
 notes-to-self
-scratch-code.js
-testNewsData.json

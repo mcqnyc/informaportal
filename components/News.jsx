@@ -1,31 +1,28 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Loader from './Loader.jsx';
-import Pager from 'react-pager';
 import Time from 'react-time';
 import PropTypes from 'prop-types';
-
+import { Form, FormGroup, FormControl, Button, InputGroup, Pagination } from 'react-bootstrap';
 
 
 class News extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handlePageChanged = this.handlePageChanged.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
     this.getTheNews = this.getTheNews.bind(this);
     this.convertTheTimestamp = this.convertTheTimestamp.bind(this);
 
     this.state = {
       data: [],
       loading: true,
-      total: 10,
-      currentPage: 0,
-      visiblePages: 3,
+      activePage: 1
     };
   }
 
-  handlePageChanged(newPage) {
-    this.setState({ currentPage: newPage });
+  handleSelect(eventKey) {
+    this.setState({ activePage: eventKey });
   }
 
   getTheNews(e) {
@@ -55,7 +52,7 @@ class News extends React.Component {
         this.setState({data: response.response.results, loading: false});
       })
       .catch((error) => {
-        console.error('this is a fetch error', error);
+        console.error('fetch error in the News API', error);
     });
   }
 
@@ -69,12 +66,12 @@ class News extends React.Component {
       )
     }
 
-    const { data, currentPage, visiblePages } = this.state;
+    const { data, activePage } = this.state;
 
-    // Logic for displaying news items
+    // Logic for displaying paginated news items
     const itemsPerPage = 5;
-    let indexOfFirstItem = currentPage;
-    let indexOfLastItem = indexOfFirstItem + itemsPerPage;
+    let indexOfFirstItem = (activePage - 1) * itemsPerPage;
+    let indexOfLastItem = activePage * itemsPerPage;
     let currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
@@ -86,17 +83,24 @@ class News extends React.Component {
         <ul id="news-content">
           {currentItems.map((item) => {
             return (
-              <li key={item.id} ><Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />: <Link to={item.webUrl} target="_blank">{item.webTitle}</Link></li>
+              <li key={item.id} >
+                <Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />:
+                <Link to={item.webUrl} target="_blank"> {item.webTitle}</Link>
+              </li>
             );
           })}
         </ul>
-        <Pager 
-          total={this.state.total}
-          current={this.state.currentPage}
-          visiblePages={this.state.visiblePages}
-          titles={{ first: '|<', last: '>|' }}
-          className="pagination-sm pull-right"
-          onPageChanged={this.handlePageChanged}
+        <Pagination 
+          prev
+          next
+          first
+          last
+          ellipsis={false}
+          boundaryLinks
+          items={10}
+          maxButtons={3}
+          activePage={this.state.activePage}
+          onSelect={this.handleSelect}
         />
       </section>
     );

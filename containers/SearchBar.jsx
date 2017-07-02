@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/action-creators';
+// import { Form, FormGroup, FormControl, Button, InputGroup } from 'react-bootstrap';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -19,23 +20,19 @@ class SearchBar extends React.Component {
 
   onFormSubmit(event){
     event.preventDefault();
-    console.log('this.state.term', this.state.term);
-    
     this.props.fetchWeather(this.state.term);
     this.setState({ term: '' });
   }
 
   render () {
     return (
-      <form onSubmit={this.onFormSubmit} className="input-group">
+      <form onSubmit={this.onFormSubmit} className="">
         <input type="text" 
           placeholder="Get a five-day forecast in your favorite cities"
           className="form-control"
           value={this.state.term}
           onChange={this.onInputChange} />
-        <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Submit</button>
-        </span>
       </form>
     );
   }
