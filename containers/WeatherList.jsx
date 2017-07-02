@@ -5,10 +5,10 @@ import GoogleMap from '../components/GoogleMap.jsx'
 
 class WeatherList extends React.Component {
   renderWeather(cityData){
-    const name = cityData.city.name;
-    const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => temp - 273);
-    const humidities = cityData.list.map(weather => weather.main.humidity);
-    const { lon, lat } = cityData.city.coord;
+    const name = cityData.location.name;
+    const temps = cityData.forecast.forecastday.map(weather => weather.day.maxtemp_c);
+    const humidities = cityData.forecast.forecastday.map(weather => weather.day.avghumidity);
+    const { lon, lat } = cityData.location;
 
     return (
       <tr key={name} className="weather-result-row">
@@ -25,8 +25,8 @@ class WeatherList extends React.Component {
         <thead className="table table-hover">
           <tr>
             <th>City</th>
-            <th>Temperature (&deg;C)</th>
-            <th>Humidity (%)</th>
+            <th>Avg. Temp (&deg;C)</th>
+            <th>Avg. Humidity (%)</th>
           </tr>
         </thead>
         <tbody>
