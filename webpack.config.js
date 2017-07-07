@@ -18,24 +18,24 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   enforce: 'pre',
-      //   test: /\.js$/,
-      //   loader: 'eslint-loader',
-      //   exclude: /node_modules/
-      // },
       {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
-      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
         include: [
           path.resolve(__dirname, 'client'),
           path.resolve(__dirname, 'components'),
           path.resolve(__dirname, 'containers'),
-        ],
-        test: /\.(js|jsx)$/,
-        loader: 'babel-loader'
+        ]
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.css$/,
