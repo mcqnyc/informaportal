@@ -1,11 +1,12 @@
-import { FETCH_WEATHER } from '../actions/action-creators.js';
+import { FETCH_WEATHER } from '../actions/action-creators';
 
-export default function(state = [], action){
+export default function (state = [], action) {
   console.log('action recvd', action);
-  switch (action.type){
+  switch (action.type) {
     case FETCH_WEATHER:
       return state.concat(action.payload.data);
       // return [ action.payload.data, ...state, console.log('FETCH_WEATHER state : ',state)];
+    default:
+      return state;
   }
-  return state;
 }

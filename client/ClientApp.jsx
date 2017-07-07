@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../store.js';
-import Header from '../components/Header.jsx';
-import Landing from '../components/Landing.jsx';
-import Login from '../components/Login.jsx';
-import Signup from '../components/Signup.jsx';
-import Footer from '../components/Footer.jsx';
+import store from '../store';
+import Header from '../components/Header';
+import Landing from '../components/Landing';
+import Login from '../components/Login';
+import Signup from '../components/Signup';
+import Footer from '../components/Footer';
 
 import '../public/styles/reset.css';
 import '../public/styles/style.css';
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <Provider store={store}>
         <BrowserRouter>
@@ -33,6 +33,6 @@ export default class App extends Component {
       </Provider>
     );
   }
-};
+}
 
 render(<App />, document.getElementById('app'));
