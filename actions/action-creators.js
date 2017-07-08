@@ -6,6 +6,10 @@ const ROOT_URL = `https://api.apixu.com/v1/forecast.json?key=${API_KEY}`;
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(city) {
+  if (!city) {
+    city = 'New York';
+  }
+
   const url = `${ROOT_URL}&q=${city}&days=5`;
   const request = axios.get(url);
 

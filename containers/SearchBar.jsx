@@ -14,31 +14,33 @@ class SearchBar extends React.Component {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
-  onInputChange(event){
+  onInputChange(event) {
     this.setState({ term: event.target.value });
   }
 
-  onFormSubmit(event){
+  onFormSubmit(event) {
     event.preventDefault();
     this.props.fetchWeather(this.state.term);
     this.setState({ term: '' });
   }
 
-  render () {
+  render() {
     return (
       <form onSubmit={this.onFormSubmit} className="">
-        <input type="text" 
+        <input
+          type="text"
           placeholder="Get a five-day forecast in your favorite cities"
           className="form-control"
           value={this.state.term}
-          onChange={this.onInputChange} />
-          <button type="submit" className="btn btn-secondary">Submit</button>
+          onChange={this.onInputChange}
+        />
+        <button type="submit" className="btn btn-secondary">Submit</button>
       </form>
     );
   }
 }
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchWeather }, dispatch);
 }
 

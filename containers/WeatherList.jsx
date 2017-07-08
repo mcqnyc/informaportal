@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Chart from '../components/Chart.jsx'
-import GoogleMap from '../components/GoogleMap.jsx'
+import Chart from '../components/Chart';
+import GoogleMap from '../components/GoogleMap';
 
 class WeatherList extends React.Component {
-  renderWeather(cityData){
+  renderWeather(cityData) {
     const name = cityData.location.name;
     const forecasts = cityData.forecast.forecastday;
     const temps = forecasts.map(weather => weather.day.maxtemp_c);
@@ -38,7 +38,7 @@ class WeatherList extends React.Component {
   }
 }
 
-function mapStateToProps({weather}){
+function mapStateToProps({ weather }) {
   return { weather };
 }
 
