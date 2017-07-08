@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint client/**/*.js client/**/*.jsx webpack.config.js",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:coverage": "jest --coverage",
     "build": "webpack -p --env.prod",
     "dev": "webpack --env.dev",
     "validate": "npm run lint",
@@ -42,9 +45,11 @@
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.5.2",
-    "babel-preset-react": "^6.16.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "commitizen": "^2.9.5",
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.19.0",
@@ -55,6 +60,8 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^2.1.1",
+    "jest": "^20.0.4",
+    "react-test-renderer": "^15.6.1",
     "redux-devtools-extension": "^2.13.2",
     "webpack": "^2.6.1"
   },
