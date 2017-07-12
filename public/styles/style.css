@@ -401,7 +401,9 @@ a:active {
 .youtube-api h2 {
   /*flex: 1.25;*/
   text-align: center;
-  padding: 10px;
+  font-size: 1em;
+  line-height: 1em;
+  /*padding: 10px;*/
 }
 
 .youtube-api .video {
@@ -479,6 +481,9 @@ td:first-of-type, td:first-of-type > div {
 .news-button-group h2 {
   flex: 1.25;
   text-align: center;
+  font-size: 1em;
+  line-height: 1em;
+  /*margin: 0;*/
 }
 
 .news-button-group button {
