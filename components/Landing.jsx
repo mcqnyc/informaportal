@@ -2,26 +2,25 @@ import React from 'react';
 import News from './News.jsx';
 import YouTube from './YouTube.jsx';
 import SearchBar from '../containers/SearchBar.jsx';
-import WeatherList from '../containers/WeatherList.jsx';
 
 class Landing extends React.Component {
-  render () {
+  render() {
     return (
-      <div className="container">
+      <div>
         <div className="navbar-spacer"></div>
-        
         <div className="row">
-          
-          <section className="col-1">
+
+          <section className="span-3-of-3">
+            <News />
             <SearchBar />
-            <WeatherList />
           </section>
 
-          <section className="col-1">
-            <News />
+          <section className="span-3-of-3">
           </section>
-          
-        
+
+          <section className="span-3-of-3">
+            <YouTube />
+          </section>
 
         </div>
       </div>

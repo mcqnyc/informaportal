@@ -32,8 +32,8 @@ body {
 /* section styling - creates boxes around content from apis */
 
 section {
-  padding: 1px 5px;
-  margin: 0.5rem auto;
+  padding: 0px 2px;
+  margin: 0.1rem auto;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   box-shadow: 1px 2px 2.5px #888;
@@ -41,19 +41,23 @@ section {
 
 
 .container {
+  border: 1px solid #f06d06;
   margin: 0 .5em;
 }
 
 .row {
+  max-width: 1140px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;  
   justify-content: space-around;
+  border: 3px solid green;
 }
 
 
 .col-1,
 .col-2 {
-  min-width: 300px;
+  min-width: 280px;
   flex: 1;
 }
 
@@ -193,43 +197,7 @@ a:active {
 }
 
 
-/*.pagination {
-  margin: 1px 0;
-  box-shadow: 1px 1.5px 1px #656565;
-}
 
-.pagination ul {
-  border: 0px;
-  padding: 0px;
-  min-width: 266px;
-}
-
-.pagination li {
-  list-style: none;  
-  float: left;
-  margin: 0 .5px;
-  min-width : 27px;
-  min-height: 2em;
-  border: 1px solid #2e6da4;
-  background-color: #337ab7;
-  border-radius: 2px;
-  color: white;
-  text-align: center;
-  line-height: 1.9em;
-  cursor: pointer;
-}
-
-.pagination li:hover {
-  background-color: white;
-  border: 1px solid #2e6da4;
-  color: #337ab7;
-}
-
-.pagination .active-class {
-  background-color: white !important;
-  border: 1px solid #2e6da4 !important;
-  color: #337ab7 !important;  
-}*/
 
 
 /* ---- Loaders ---- */
@@ -260,7 +228,8 @@ a:active {
 .app:before {
   content: '';
   display: block;
-  padding-top: 3.75em;
+  padding-top: 4em;
+  /*padding-top: 3.75em;*/
 }
 
 .navbar {
@@ -286,7 +255,7 @@ a:active {
  
 .navbar li a {
   display: block;
-  padding: 19px 20px;
+  padding: 17px 20px;
   border-right: 1px solid #f4f4f4;
   border-left: 1px solid #f4f4f4;
   text-decoration: none;
@@ -300,7 +269,7 @@ a:active {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 11px 20px;
+  padding: 17px 20px;
   text-decoration: none;
 }
  
@@ -380,32 +349,7 @@ a:active {
 /* ------------------------- */ 
 
 /*@media (min-width: 660px) {*/
-/*@media (min-width: 768px) {*/
-@media (min-width: 48em) {
-  .navbar {
-    /*flex-direction: row;*/
-    /*justify-content: space-between;*/
-  }
-  .navbar li {
-    float: left;
-  }
-  .navbar li a {
-    padding: 19px 30px;
-  }
-  .navbar .menu {
-    clear: none;
-    float: left;
-    max-height: none;
-  }
-  .navbar .menu-right {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .navbar .menu-icon {
-    display: none;
-  }
-
+@media (min-width: 896px) {
   /* API boxes expand using this */
 
   .row {
@@ -422,8 +366,32 @@ a:active {
 }
 
 
-
-
+@media (min-width: 600px) {
+/*@media (min-width: 48em) {*/
+  .navbar {
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+  }
+  .navbar li {
+    float: left;
+  }
+  .navbar li a {
+    padding: 17px 30px;
+  }
+  .navbar .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+  .navbar .menu-right {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .navbar .menu-icon {
+    display: none;
+  }
+}
 
 /* ------------------------- */
 /* YOUTUBE API */
@@ -462,9 +430,15 @@ div .item h5 {
 /* WEATHER API */
 /* ------------------------- */ 
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
 td, th {
   vertical-align: middle !important;
   text-align: center !important;
+  border: 1px solid black;
 }
 
 svg {
