@@ -32,6 +32,7 @@ body {
 /* section styling - creates boxes around content from apis */
 
 section {
+  min-width: 310px;
   padding: 0px 2px;
   margin: 0.1rem auto;
   border: 1px solid #e6e6e6;
@@ -438,23 +439,30 @@ table {
 td, th {
   vertical-align: middle !important;
   text-align: center !important;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 svg {
-  height: 100px;
+  height: 80px;
 }
 
 /* this is for sizing the Google Map */
 td:first-of-type, td:first-of-type > div {
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
+}
+
+.weather-api {
+  margin-top: 4px;
+  padding: 2px 0;
+  border-top: 1px solid red;
 }
 
 .weather-result-row {
-  border: 4px solid #e6e6e6;
+  max-width: 300px;
+  /*border: 4px solid #e6e6e6;*/
   border-radius: 2px;
-  box-shadow: 2px 3px 3.5px #888;
+  /*box-shadow: 2px 3px 3.5px #888;*/
 }
 
 /* ------------------------- */

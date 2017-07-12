@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <section className="news-api">
+      <section className="weather-api">
         <Form inline onSubmit={this.onFormSubmit} >
           <FormGroup controlId="formInlineSearch" >
             <InputGroup>
@@ -38,7 +38,9 @@ class SearchBar extends React.Component {
                 onChange={this.onInputChange}
               />
               {' '}
+              <InputGroup.Button>
                 <Button type="submit">Submit</Button>
+              </InputGroup.Button>
             </InputGroup>
           </FormGroup>
         </Form>

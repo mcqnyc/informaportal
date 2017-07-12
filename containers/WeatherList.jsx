@@ -4,6 +4,7 @@ import Chart from '../components/Chart';
 import GoogleMap from '../components/GoogleMap';
 
 class WeatherList extends React.Component {
+
   renderWeather(cityData) {
     const name = cityData.location.name;
     const forecasts = cityData.forecast.forecastday;
@@ -21,6 +22,10 @@ class WeatherList extends React.Component {
   }
 
   render() {
+    if (this.props.weather < 1) {
+      return null;
+    }
+
     return (
       <table>
         <thead className="table table-hover">
