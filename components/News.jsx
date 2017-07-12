@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import Loader from './Loader.jsx';
+import { Link } from 'react-router-dom';
 import Time from 'react-time';
-import PropTypes from 'prop-types';
-import { Form, FormGroup, FormControl, Button, InputGroup, Pagination } from 'react-bootstrap';
+import { Button, Pagination } from 'react-bootstrap';
 
 
 class News extends React.Component {
@@ -11,18 +9,19 @@ class News extends React.Component {
     super(props);
 
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.getTheNews = this.getTheNews.bind(this);
     this.convertTheTimestamp = this.convertTheTimestamp.bind(this);
 
     this.state = {
       data: [],
-      loading: true,
-      activePage: 1
+      isLoading: false,
+      activePage: 1,
     };
   }
 
-  handleSelect(eventKey) {
-    this.setState({ activePage: eventKey });
+  componentDidMount() {
+    this.handleClick();
   }
 
   getTheNews(e) {
@@ -34,63 +33,67 @@ class News extends React.Component {
     return new Date(webPublicationDate);
   }
 
-  componentDidMount () {
-    const myInit = { 
+  handleSelect(eventKey) {
+    this.setState({ activePage: eventKey });
+  }
+
+  handleClick() {
+    this.setState({ isLoading: true });
+
+    const myInit = {
       method: 'GET',
       mode: 'cors',
-      cache: 'default'
+      cache: 'default',
     };
 
     fetch('https://content.guardianapis.com/search?section=fashion&order-by=newest&page-size=50&q=business&api-key=7df519db-080e-4ab3-98fe-a36d60896d5c', { myInit })
       .then((response) => {
-        if(response.ok){
-          return response.json()
+        if (response.ok) {
+          return response.json();
         }
         throw new Error('Network response was not ok.');
       })
       .then((response) => {
-        this.setState({data: response.response.results, loading: false});
+        this.setState({ data: response.response.results, isLoading: false });
       })
       .catch((error) => {
         console.error('fetch error in the News API', error);
-    });
+      });
   }
 
-  render () {
-
-    if(this.state.loading){
-      return (
-        <section className="news-api">
-          <Loader />
-        </section>
-      )
-    }
+  render() {
+    const isLoading = this.state.isLoading;
 
     const { data, activePage } = this.state;
 
     // Logic for displaying paginated news items
     const itemsPerPage = 5;
-    let indexOfFirstItem = (activePage - 1) * itemsPerPage;
-    let indexOfLastItem = activePage * itemsPerPage;
-    let currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+    const indexOfFirstItem = (activePage - 1) * itemsPerPage;
+    const indexOfLastItem = activePage * itemsPerPage;
+    const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
       <section className="news-api">
         <div className="news-button-group">
           <h2>Fashion News</h2>
-          <button id="get-news-button" className="btn btn-primary" onClick={this.getTheNews} >Get the news</button>
+          <Button
+            bsStyle="primary"
+            disabled={isLoading}
+            onClick={!isLoading ? this.getTheNews : null}
+          >
+            {isLoading ? 'Loading...' : 'Get the news'}
+          </Button>
         </div>
         <ul id="news-content">
-          {currentItems.map((item) => {
-            return (
-              <li key={item.id} >
-                <Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />:
-                <Link to={item.webUrl} target="_blank"> {item.webTitle}</Link>
-              </li>
-            );
-          })}
+          {currentItems.map(item => (
+            <li key={item.id} >
+              <Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />:
+              <Link to={item.webUrl} target="_blank"> {item.webTitle}</Link>
+            </li>
+          ),
+          )}
         </ul>
-        <Pagination 
+        <Pagination
           prev
           next
           first
