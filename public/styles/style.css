@@ -412,7 +412,7 @@ a:active {
   max-height: 400px;
 }
 
-div .item {
+div .video-item {
   margin-bottom: 4px;
   padding: 1px 0;
   /*border: 1px solid #f4f4f4;*/
@@ -420,9 +420,9 @@ div .item {
   box-shadow: 1px 2px 2.5px #888;
 }
 
-div .item h5 {
+div .video-item > h5 {
   /*margin-bottom: 4px;*/
-  padding: 4px 2px;
+  padding: 2px 2px;
   /*padding: 2px 2px 0 1px;*/
   /*border: 1px solid #f4f4f4;*/
   /*border-radius: 2px;*/
@@ -582,7 +582,7 @@ td:first-of-type, td:first-of-type > div {
 
 /* form control for YouTube API */
 
-.form-control {
+/*.form-control {
   display: block;
   width: 100%;
   height: 34px;
@@ -636,7 +636,7 @@ textarea.form-control {
 input[type="search"] {
   -webkit-appearance: none;
 }
-
+*/
 
 
 
@@ -648,7 +648,7 @@ input[type="search"] {
 /* BUTTONS */
 /* ------------------------- */ 
 
-button#load {
+/*button#load {
   padding: 0 3em;
   outline: none;
   border: none;
@@ -783,7 +783,7 @@ fieldset[disabled] .btn-primary.focus {
 }
 
 
-
+*/
 
 
 
@@ -792,7 +792,7 @@ fieldset[disabled] .btn-primary.focus {
 /* ------------------------- */
 /* SPINNERS */
 /* ------------------------- */  
-.spinner {
+/*.spinner {
   display: block;
   width: 100px;
   height: 100px;
@@ -861,11 +861,11 @@ fieldset[disabled] .btn-primary.focus {
 .spinner-4:after {
   -webkit-animation: pulse 2s linear 2.3s infinite;
           animation: pulse 2s linear 2.3s infinite;
-}
+}*/
 
 /* - - - - Animations - - - - */
 
-@-webkit-keyframes spinny {
+/*@-webkit-keyframes spinny {
   0% {
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
@@ -941,4 +941,4 @@ fieldset[disabled] .btn-primary.focus {
             transform: scale(1.3);
     opacity: 0;
   }
-}
+}*/
