@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 import Time from 'react-time';
 import { Button, Pagination } from 'react-bootstrap';
 
-
 class News extends React.Component {
   constructor(props) {
     super(props);
 
     this.handleSelect = this.handleSelect.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.getTheNews = this.getTheNews.bind(this);
     this.convertTheTimestamp = this.convertTheTimestamp.bind(this);
 
     this.state = {
@@ -22,11 +20,6 @@ class News extends React.Component {
 
   componentDidMount() {
     this.handleClick();
-  }
-
-  getTheNews(e) {
-    e.preventDefault();
-    this.componentDidMount();
   }
 
   convertTheTimestamp(webPublicationDate) {
@@ -79,7 +72,7 @@ class News extends React.Component {
           <Button
             bsStyle="primary"
             disabled={isLoading}
-            onClick={!isLoading ? this.getTheNews : null}
+            onClick={!isLoading ? this.handleClick : null}
           >
             {isLoading ? 'Loading...' : 'Get the news'}
           </Button>
