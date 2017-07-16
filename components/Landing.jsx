@@ -1,31 +1,27 @@
 import React from 'react';
-import News from './News.jsx';
-import YouTube from './YouTube.jsx';
-import SearchBar from '../containers/SearchBar.jsx';
+import News from './News';
+import YouTube from './YouTube';
+import SearchBar from '../containers/SearchBar';
 
-class Landing extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className="navbar-spacer"></div>
-        <div className="row">
+const Landing = () => (
+  <div>
+    <div className="navbar-spacer" />
+    <div className="row">
 
-          <section className="span-3-of-3">
-            <News />
-            <SearchBar />
-          </section>
+      <section className="span-3-of-3">
+        <SearchBar />
+        <News />
+      </section>
 
-          <section className="span-3-of-3">
-          </section>
+      <section className="span-3-of-3">
+      </section>
 
-          <section className="span-3-of-3">
-            <YouTube />
-          </section>
+      <section className="span-3-of-3">
+        <YouTube />
+      </section>
 
-        </div>
-      </div>
-    );
-  }
-}
+    </div>
+  </div>
+);
 
 export default Landing;
