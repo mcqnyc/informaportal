@@ -28,18 +28,18 @@ class WeatherList extends React.Component {
 
     return (
       <div className="search-weather-results">
-      <table>
-        <thead className="table table-hover">
-          <tr>
-            <th>City</th>
-            <th>Avg. Temp (&deg;C)</th>
-            <th>Avg. Humidity (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.weather.map(this.renderWeather)}
-        </tbody>
-      </table>
+        <table>
+          <thead className="table table-hover">
+            <tr>
+              <th>City</th>
+              <th>Avg. Temp (&deg;C)</th>
+              <th>Avg. Humidity (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.weather.map(this.renderWeather)}
+          </tbody>
+        </table>
       </div>
     );
   }

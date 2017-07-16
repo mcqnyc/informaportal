@@ -32,7 +32,7 @@ class Footer extends React.Component {
             </ul>
           </nav>
         </section>
-      </div>
+      // </div>
     );
   }
 }
