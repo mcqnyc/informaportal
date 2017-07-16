@@ -52,7 +52,7 @@ section {
   display: flex;
   flex-direction: column;  
   justify-content: space-around;
-  border: 3px solid green;
+  /*border: 3px solid green;*/
 }
 
 
@@ -216,10 +216,11 @@ a:active {
 /* ------------------------- */ 
 
 /* Remove the navbar's default margin-bottom and rounded borders */
-/*.navbar {
+.navbar {
   margin-bottom: 0;
   border-radius: 0;
-}*/
+  border: 0px;
+}
 
 
 
@@ -229,7 +230,7 @@ a:active {
 .app:before {
   content: '';
   display: block;
-  padding-top: 4em;
+  padding-top: 4.1em;
   /*padding-top: 3.75em;*/
 }
 
@@ -270,7 +271,7 @@ a:active {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 17px 20px;
+  padding: 7px 20px;
   text-decoration: none;
 }
  
@@ -491,7 +492,7 @@ td:first-of-type, td:first-of-type > div {
 }
 
 .news-api {
-  padding-bottom: 35px;
+  /*padding-bottom: 35px;*/
 }
 
 #news-content {

@@ -1,5 +1,4 @@
 import React from 'react';
-import Loader from './Loader.jsx';
 import { Form, FormGroup, FormControl, Button, InputGroup, ResponsiveEmbed } from 'react-bootstrap';
 
 class YouTube extends React.Component {
@@ -71,17 +70,19 @@ class YouTube extends React.Component {
 
     return (
       <section className="youtube-api">
-        <h2>Watch YouTube</h2>
         <Form inline onSubmit={this.onFormSubmit} >
-          <FormGroup controlId="formInlineSearch">
+          <FormGroup controlId="formInlineSearch" >
             <InputGroup>
+              <InputGroup.Addon>
+                Watch YouTube:
+              </InputGroup.Addon>
               <FormControl
                 type="text"
-                bsSize="lg"
                 placeholder="Search for something..."
                 value={this.state.searchTerm}
                 onChange={this.handleSearchTermChange}
               />
+              {' '}
               <InputGroup.Button>
                 <Button
                   type="submit"
