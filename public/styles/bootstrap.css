@@ -2930,14 +2930,19 @@ select[multiple].input-lg {
     display: inline-table;
     vertical-align: middle;
   }
-  .form-inline .input-group .input-group-addon,
+/* 
+Commented this code below bc it was stopping the Weather and 
+YouTube search forms from expanding to fill their respective 
+container elements
+*/
+/*  .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
   .form-inline .input-group .form-control {
     width: auto;
   }
   .form-inline .input-group > .form-control {
     width: 100%;
-  }
+  }*/
   .form-inline .control-label {
     margin-bottom: 0;
     vertical-align: middle;

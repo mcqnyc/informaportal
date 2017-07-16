@@ -28,22 +28,30 @@ class SearchBar extends React.Component {
   render() {
     return (
       <section className="weather-api">
-        <Form inline onSubmit={this.onFormSubmit} >
-          <FormGroup controlId="formInlineSearch" >
-            <InputGroup>
-              <FormControl
-                type="text"
-                placeholder="Get a five-day forecast in your favorite cities"
-                value={this.state.term}
-                onChange={this.onInputChange}
-              />
-              {' '}
-              <InputGroup.Button>
-                <Button type="submit">Submit</Button>
-              </InputGroup.Button>
-            </InputGroup>
-          </FormGroup>
-        </Form>
+        <div className="search-weather-api">
+          <Form inline onSubmit={this.onFormSubmit}>
+            <FormGroup controlId="formInlineSearch" >
+              <InputGroup>
+                <FormControl
+                  type="text"
+                  placeholder="Get a 5-day forecast in any city"
+                  value={this.state.term}
+                  onChange={this.onInputChange}
+                />
+                {' '}
+                <InputGroup.Button>
+                  <Button
+                    type="submit"
+                    bsStyle="primary"
+                  >
+                  Get the weather
+                  </Button>
+                </InputGroup.Button>
+              </InputGroup>
+            </FormGroup>
+          </Form>
+        </div>
+
         <WeatherList />
       </section>
     );

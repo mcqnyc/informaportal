@@ -12,17 +12,13 @@ class YouTube extends React.Component {
     this.state = {
       data: [],
       isLoading: false,
-      searchTerm: 'Rei Kawakubo',
+      searchTerm: 'Ralph Lauren',
     };
-  }
-
-
-  handleSearchTermChange(event){
-    this.setState({searchTerm: event.target.value});
   }
 
   componentDidMount() {
     this.searchYouTube();
+    this.setState({ searchTerm: '' });
   }
 
   onFormSubmit(event) {
@@ -30,6 +26,9 @@ class YouTube extends React.Component {
     this.searchYouTube();
   }
 
+  handleSearchTermChange(event) {
+    this.setState({ searchTerm: event.target.value });
+  }
 
   searchYouTube() {
     const myInit = {
@@ -97,17 +96,16 @@ class YouTube extends React.Component {
           </FormGroup>
         </Form>
 
-        <div id="youtube-results"></div>
-          {this.state.data.map((item) => {
-            return (
-              <div className="video-item" key={item.id.videoId} >
-                <h5>{item.snippet.title}</h5>
-                {/*<ResponsiveEmbed a16by9>*/}
-                <iframe className="video" src={`https://www.youtube.com/embed/${item.id.videoId}`} frameBorder="0" allowFullScreen></iframe>
-                {/*</ResponsiveEmbed>*/}
-              </div>
-            );
-          })}
+        <div id="youtube-results" />
+        {this.state.data.map(item => (
+          <div className="video-item" key={item.id.videoId} >
+            <h5>{item.snippet.title}</h5>
+            {/*<ResponsiveEmbed a16by9>*/}
+            <iframe className="video" title={item.snippet.title} src={`https://www.youtube.com/embed/${item.id.videoId}`} frameBorder="0" allowFullScreen />
+            {/*</ResponsiveEmbed>*/}
+          </div>
+          ),
+        )}
       </section>
     );
   }

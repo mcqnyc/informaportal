@@ -27,6 +27,7 @@ class WeatherList extends React.Component {
     }
 
     return (
+      <div className="search-weather-results">
       <table>
         <thead className="table table-hover">
           <tr>
@@ -39,6 +40,7 @@ class WeatherList extends React.Component {
           {this.props.weather.map(this.renderWeather)}
         </tbody>
       </table>
+      </div>
     );
   }
 }
