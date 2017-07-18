@@ -10,7 +10,7 @@ const Landing = () => (
     <div className="row">
 
       <section className="span-3-of-3">
-        <SearchImages />
+        <YouTube />
       </section>
 
       <section className="span-3-of-3">
@@ -19,7 +19,7 @@ const Landing = () => (
       </section>
 
       <section className="span-3-of-3">
-        <YouTube />
+        <SearchImages />
       </section>
 
     </div>
