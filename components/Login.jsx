@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class Login extends React.Component {
   render () {
     return (
-      <div className="container">
         <section className="auth">
           <div className="row">
             <div className="col-sm-12 col-sm-offset-3">
@@ -18,7 +17,6 @@ class Login extends React.Component {
             </div>
           </div>
         </section>
-      </div>
     );
   }
 }
