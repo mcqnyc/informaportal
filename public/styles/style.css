@@ -573,6 +573,7 @@ td:first-of-type, td:first-of-type > div {
 /* section styling height override for authentication pages (login.html & signup.html) */
 .auth {
   height: 16rem;
+  max-width: 1140px;
 }
 
 
