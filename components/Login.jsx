@@ -13,7 +13,7 @@ class Login extends React.Component {
                 <input type="password" placeholder="password" />
                 <button>Login</button>
               </form>
-              <Link to="signup">Don't have an account? <strong>Signup</strong> ...</Link>
+              <Link to="signup">Don&apos;t have an account? <strong>Signup</strong> ...</Link>
             </div>
           </div>
         </section>

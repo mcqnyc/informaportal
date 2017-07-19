@@ -396,8 +396,23 @@ a:active {
 }
 
 /* ------------------------- */
+/* IMAGE SEARCH API */
+/* ------------------------- */ 
+
+
+.image-search-api {
+  padding-top: 2px;
+}
+
+
+/* ------------------------- */
 /* YOUTUBE API */
 /* ------------------------- */ 
+
+
+.youtube-api {
+  padding-top: 2px;
+}
 
 .youtube-api h2 {
   /*flex: 1.25;*/

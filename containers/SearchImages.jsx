@@ -70,7 +70,7 @@ class SearchImages extends React.Component {
 
   render() {
     return (
-      <section className="youtube-api">
+      <section className="image-search-api">
         <Form inline onSubmit={this.onFormSubmit} >
           <FormGroup controlId="formInlineSearch" >
             <InputGroup>
