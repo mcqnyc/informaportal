@@ -41,20 +41,18 @@ class SearchImages extends React.Component {
     }
 
     const API_KEY_IMAGES = '5bm2bb5nwpzgxk7puhm4w9vq';
-    const ROOT_URL_IMAGES = `https://api.gettyimages.com/v3/search/images`;
+    const ROOT_URL_IMAGES = 'https://api.gettyimages.com/v3/search/images';
     const myInit = {
       method: 'GET',
-      headers: {'Api-Key': API_KEY_IMAGES},
+      headers: { 'Api-Key': API_KEY_IMAGES },
       mode: 'cors',
       cache: 'default',
     };
 
     const request = new Request(`${ROOT_URL_IMAGES}?phrase=${imageQuery}`, myInit);
-    console.log(request);
 
     fetch(request)
       .then((response) => {
-        console.log(response);
         if (response.ok) {
           return response.json();
         }
@@ -92,15 +90,13 @@ class SearchImages extends React.Component {
             </InputGroup>
           </FormGroup>
         </Form>
-        
 
         <div id="image-results" />
         {this.state.data.map(item => (
-          
-            <img src={item.display_sizes[0].uri} key={item.id} className="img-responsive img-thumbnail"  alt={item.title} />
+          <img src={item.display_sizes[0].uri} key={item.id} className="img-responsive img-thumbnail" alt={item.title} />
           ),
         )}
-        
+
       </section>
     );
   }
