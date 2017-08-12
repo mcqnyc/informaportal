@@ -22,6 +22,33 @@ export function fetchWeather(city) {
 }
 
 
+
+const API_KEY_NEWS = '7df519db-080e-4ab3-98fe-a36d60896d5c';
+const ROOT_URL_NEWS = `https://content.guardianapis.com/search?section=fashion&order-by=newest&page-size=50&q=business&api-key=${API_KEY_NEWS}`;
+
+export const FETCH_NEWS = 'FETCH_NEWS';
+
+export function fetchNews(city) {
+    // this.setState({ isLoading: true });
+
+  const myInit = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default',
+  };
+
+  const url = `${ROOT_URL_NEWS}`;
+  const request = axios.get(url, myInit);
+
+  console.log('!@#$ NEWS request:', request);
+
+  return {
+    type: FETCH_NEWS,
+    payload: request,
+  };
+}
+
+
 // Stock quotes API action creator is below
 
 // const API_KEY_STOCKS = '0549eabf300590e088cf25b85572bbfe';
