@@ -11,7 +11,7 @@
     "build": "webpack -p --env.prod",
     "dev": "webpack --env.dev",
     "validate": "npm run lint",
-    "watch": "webpack --env.dev --watch",
+    "watch": "webpack --env.prod --watch",
     "commit": "git-cz"
   },
   "author": "mcqnyc",

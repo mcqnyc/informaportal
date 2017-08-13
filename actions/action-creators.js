@@ -28,7 +28,7 @@ const ROOT_URL_NEWS = `https://content.guardianapis.com/search?section=fashion&o
 
 export const FETCH_NEWS = 'FETCH_NEWS';
 
-export function fetchNews(city) {
+export function fetchNews() {
     // this.setState({ isLoading: true });
 
   const myInit = {

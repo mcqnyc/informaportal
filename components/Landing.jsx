@@ -1,7 +1,7 @@
 import React from 'react';
 import YouTube from './YouTube';
 import SearchBar from '../containers/SearchBar';
-import SearchNews from '../containers/SearchNews';
+import News from './News';
 import SearchImages from '../containers/SearchImages';
 
 const Landing = () => (
@@ -15,7 +15,7 @@ const Landing = () => (
 
       <section className="span-3-of-3">
         <SearchBar />
-        <SearchNews />
+        <News />
       </section>
 
       <section className="span-3-of-3">
