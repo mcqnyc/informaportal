@@ -14,15 +14,13 @@ class News extends React.Component {
     // this.handleClick = this.handleClick.bind(this);
     this.convertTheTimestamp = this.convertTheTimestamp.bind(this);
 
+    this.props.fetchNews();
+
     this.state = {
       news: [],
       isLoading: false,
       activePage: 1,
     };
-  }
-
-  componentDidMount() {
-    this.props.fetchNews();
   }
 
   convertTheTimestamp(webPublicationDate) {
@@ -84,9 +82,16 @@ class News extends React.Component {
   }
 }
 
-function mapStateToProps({ news }) {
-  return { news };
+function mapStateToProps(state) {
+  console.log('@@@ NEWS state', state)
+  // console.log('in mapStateToProps; news:', state.news)
+  return { news: state.news };
 }
+
+// function mapStateToProps({ news }) {
+//   console.log('in mapStateToProps; news:', news)
+//   return { news };
+// }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchNews }, dispatch);
