@@ -1,16 +1,33 @@
 import axios from 'axios';
 
-const API_KEY = 'de3292e2fdb344f395a181216170207';
-const ROOT_URL = `https://api.apixu.com/v1/forecast.json?key=${API_KEY}`;
+/*
+ * action types
+ */
 
 export const FETCH_WEATHER = 'FETCH_WEATHER';
+export const FETCH_NEWS = 'FETCH_NEWS';
+
+/*
+ * other constants
+ */
+
+const API_KEY_WEATHER = 'de3292e2fdb344f395a181216170207';
+const ROOT_URL_WEATHER = `https://api.apixu.com/v1/forecast.json?key=${API_KEY_WEATHER}`;
+const API_KEY_NEWS = '7df519db-080e-4ab3-98fe-a36d60896d5c';
+const ROOT_URL_NEWS = `https://content.guardianapis.com/search?section=fashion&order-by=newest&page-size=50&q=business&api-key=${API_KEY_NEWS}`;
+
+
+/*
+ * action creators
+ */
+
 
 export function fetchWeather(city) {
   if (!city) {
     city = 'New York';
   }
 
-  const url = `${ROOT_URL}&q=${city}&days=5`;
+  const url = `${ROOT_URL_WEATHER}&q=${city}&days=5`;
   const request = axios.get(url);
 
   console.log('request:', request);
@@ -22,11 +39,6 @@ export function fetchWeather(city) {
 }
 
 
-
-const API_KEY_NEWS = '7df519db-080e-4ab3-98fe-a36d60896d5c';
-const ROOT_URL_NEWS = `https://content.guardianapis.com/search?section=fashion&order-by=newest&page-size=50&q=business&api-key=${API_KEY_NEWS}`;
-
-export const FETCH_NEWS = 'FETCH_NEWS';
 
 export function fetchNews() {
     // this.setState({ isLoading: true });
