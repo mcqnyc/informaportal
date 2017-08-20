@@ -40,7 +40,7 @@ class SearchImages extends React.Component {
       imageQuery = 'fashion';
     }
 
-    const API_KEY_IMAGES = '5bm2bb5nwpzgxk7puhm4w9vq';
+    const API_KEY_IMAGES = 'a3amm4b7f27n853dcu3xksfz';
     const ROOT_URL_IMAGES = 'https://api.gettyimages.com/v3/search/images';
     const myInit = {
       method: 'GET',
