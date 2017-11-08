@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 1339;
 
-const morgan       = require('morgan');
+const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-const bodyParser   = require('body-parser');
-const session      = require('express-session');
+const bodyParser  = require('body-parser');
+const session = require('express-session');
 
 app.use(morgan('dev')); // log every request to the console
 // app.use(cookieParser()); // read cookies (needed for auth)

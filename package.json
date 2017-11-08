@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint client/**/*.js client/**/*.jsx webpack.config.js",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:update": "jest -u",
     "test:coverage": "jest --coverage",
     "build": "webpack -p --env.prod",

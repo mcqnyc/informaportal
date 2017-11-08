@@ -11,8 +11,9 @@ import Footer from '../components/Footer';
 
 import '../public/styles/reset.css';
 import '../public/styles/bootstrap.css';
-import '../public/styles/grid.css';
+// import '../public/styles/grid.css';
 import '../public/styles/style.css';
+import '../public/styles/queries.css';
 
 const App = () => (
   <Provider store={store}>

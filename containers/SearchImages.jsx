@@ -40,6 +40,7 @@ class SearchImages extends React.Component {
       imageQuery = 'fashion';
     }
 
+    // const API_KEY_IMAGES = 'x5vej2chr3sgejjbej9942n7';
     const API_KEY_IMAGES = 'hf23xr92vcbq5n9xt8h5tjcq';
     const ROOT_URL_IMAGES = 'https://api.gettyimages.com/v3/search/images';
     const myInit = {
@@ -93,7 +94,12 @@ class SearchImages extends React.Component {
 
         <div id="image-results" />
         {this.state.data.map(item => (
-          <img src={item.display_sizes[0].uri} key={item.id} className="img-responsive img-thumbnail" alt={item.title} />
+          <img
+            src={item.display_sizes[0].uri}
+            key={item.id}
+            className="img-responsive img-thumbnail"
+            alt={item.title}
+          />
           ),
         )}
 

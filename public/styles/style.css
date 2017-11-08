@@ -32,9 +32,14 @@ body {
 /* section styling - creates boxes around content from apis */
 
 section {
-  min-width: 310px;
+  /*min-width: 310px;*/
+  flex: 1 1 310px;
+  max-width: 100%;
+  /*max-height: 950px;*/
+  /*overflow-y: scroll;*/
   padding: 0px 2px;
-  margin: 0.1rem auto;
+  /*margin: 0.1rem auto;*/
+  margin: .1% auto;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   box-shadow: 1px 2px 2.5px #888;
@@ -47,7 +52,7 @@ section {
 }*/
 
 .row {
-  max-width: 1140px;
+  /*max-width: 1140px;*/
   margin: 0 auto;
   display: flex;
   flex-direction: column;  
@@ -56,11 +61,11 @@ section {
 }
 
 
-.col-1,
+/*.col-1,
 .col-2 {
   min-width: 280px;
   flex: 1;
-}
+}*/
 
 
 .pull-right {
@@ -219,17 +224,16 @@ a:active {
   border: 0px;
 }
 
+.app {
+/* ensures nothing enters the space behind the floating navbar */
+  margin-top: 56px;
+}
+
 
 
 /* - - - - Navbar menu toggle - - - - */
 
-/* .app:before ensures nothing enter the space behind the floating navbar */
-.app:before {
-  content: '';
-  display: block;
-  padding-top: 4.1em;
-  /*padding-top: 3.75em;*/
-}
+
 
 .navbar {
   background-color: #fff;
@@ -241,7 +245,8 @@ a:active {
   width: 100%;
   min-width: 280px;
   min-height: 56px;
-  z-index: 9999;
+  max-height: 56px;
+  z-index: 9990;
 }
  
 .navbar ul {
@@ -343,54 +348,7 @@ a:active {
 }
 
 
-/* ------------------------- */
-/* MEDIA QUERIES */
-/* ------------------------- */ 
 
-/*@media (min-width: 660px) {*/
-@media (min-width: 896px) {
-  /* API boxes expand using this */
-
-  .row {
-    flex-direction: row;  
-  }
-  .col-1 {
-    margin: 0 5px;
-  }
-
-  .container {
-    margin: 0 8em;
-  }
-
-}
-
-
-@media (min-width: 600px) {
-/*@media (min-width: 48em) {*/
-  .navbar {
-    /*flex-direction: row;*/
-    /*justify-content: space-between;*/
-  }
-  .navbar li {
-    float: left;
-  }
-  .navbar li a {
-    padding: 17px 30px;
-  }
-  .navbar .menu {
-    clear: none;
-    float: left;
-    max-height: none;
-  }
-  .navbar .menu-right {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .navbar .menu-icon {
-    display: none;
-  }
-}
 
 /* ------------------------- */
 /* IMAGE SEARCH API */
