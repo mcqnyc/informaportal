@@ -1,2 +1,2 @@
-# Omnichanne1-react
-An application that presents information from different APIs in one place using React on the front-end.
+# informaportal
+An application that presents information from different APIs in a dashboard UI pattern using React on the front-end.

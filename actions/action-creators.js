@@ -63,29 +63,3 @@ export function fetchNews(searchTerm) {
     payload: request,
   };
 }
-
-
-// Stock quotes API action creator is below
-
-// const API_KEY_STOCKS = '0549eabf300590e088cf25b85572bbfe';
-// const ROOT_URL_STOCKS = `https://marketdata.websol.barchart.com/getQuote.json?key=${API_KEY_STOCKS}`;
-
-// export const FETCH_STOCKS = 'FETCH_STOCKS';
-
-// export function fetchStocks(stockQuery) {
-//   if (!stockQuery) {
-//     stockQuery = 'AAPL,IBM,GOOGL';
-//   }
-
-//   const url = `${ROOT_URL_STOCKS}&symbols=${stockQuery}`;
-//   const request = axios.get(url);
-
-//   console.log('request:', request);
-
-//   return {
-//     type: FETCH_STOCKS,
-//     payload: request,
-//   };
-// }
-
-// Stock quotes API action creator is above ^^^

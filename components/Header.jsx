@@ -5,7 +5,7 @@ class Header extends React.Component {
   render () {
     return (
       <nav className="navbar">
-        <Link to="/" className="logo">Omnichanne1</Link>
+        <Link to="/" className="logo">Informaportal</Link>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
         <ul className="menu">
