@@ -15,4 +15,5 @@ dbConfig.js
 .DS_Store
 npm-debug.log
 package.json.info-port
+orig-webpack.config.js
 notes-to-self
