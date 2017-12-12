@@ -22,8 +22,14 @@ class WeatherList extends React.Component {
   }
 
   render() {
-    if (this.props.weather < 1) {
-      return null;
+  // console.log('WeatherList props:', this.props);
+    if (this.props.weather.length === 1) {
+      return (
+        <div style={{ "color":"red", "margin-left":"4px" }}>
+          {this.props.weather[0]}
+        </div>
+      );
+      // return null;
     }
 
     return (
