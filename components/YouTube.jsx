@@ -24,6 +24,7 @@ class YouTube extends React.Component {
   onFormSubmit(event) {
     event.preventDefault();
     this.searchYouTube();
+    this.setState({ searchTerm: '' });
   }
 
   handleSearchTermChange(event) {
