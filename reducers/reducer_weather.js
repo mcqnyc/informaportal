@@ -7,9 +7,8 @@ export default function (state = [], action) {
       if (action.payload.message === 'Network Error') {
         const errorMsg = action.payload.message;
         const error = `There was a ${errorMsg} getting the weather. Please check back later.`;
-        // alert('There was a ', action.payload.message,' getting the weather. Please check back later.');
         return state.concat(error);
-        return state;
+        // return state;
       }
       if (action.payload.status !== 200) {
         alert('Please check the spelling of the city name that you entered.');
