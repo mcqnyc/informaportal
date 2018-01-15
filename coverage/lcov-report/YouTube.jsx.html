@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for YouTube.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> YouTube.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { Form, FormGroup, FormControl, Button, InputGroup, ResponsiveEmbed } from 'react-bootstrap';
+&nbsp;
+class YouTube extends React.Component {
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.onFormSubmit = this.onFormSubmit.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.searchYouTube = this.searchYouTube.bind(this);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      data: [],
+      isLoading: false,
+      searchTerm: 'Ralph Lauren',
+    };
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
+<span class="cstat-no" title="statement not covered" >    this.searchYouTube();</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({ searchTerm: '' });</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>FormSubmit(event) {
+<span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    this.searchYouTube();</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({ searchTerm: '' });</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ha</span>ndleSearchTermChange(event) {
+<span class="cstat-no" title="statement not covered" >    this.setState({ searchTerm: event.target.value });</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>archYouTube() {
+    const myInit = <span class="cstat-no" title="statement not covered" >{</span>
+      method: 'GET',
+      mode: 'cors',
+      cache: 'default',
+    };
+&nbsp;
+    const { data, searchTerm } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+&nbsp;
+    const request = <span class="cstat-no" title="statement not covered" >`https://www.googleapis.com/youtube/v3/search?part=snippet&amp;type=video&amp;q=${searchTerm}&amp;maxResults=3&amp;order=viewCount&amp;publishedAfter=2017-01-01T00:00:00Z&amp;key=AIzaSyBAv3_8ITzuxD10Wc3HVeziuqmSW5EcP7A`;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    fetch(request, { myInit })</span>
+      .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; {
+<span class="cstat-no" title="statement not covered" >        if (response.ok) {</span>
+<span class="cstat-no" title="statement not covered" >          return response.json();</span>
+        }
+<span class="cstat-no" title="statement not covered" >        throw new Error('Network response was not ok.');</span>
+      })
+      .then(<span class="fstat-no" title="function not covered" >(j</span>son) =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({ data: json.items, isLoading: false });</span>
+      })
+      .catch(<span class="fstat-no" title="function not covered" >(e</span>rror) =&gt; {
+<span class="cstat-no" title="statement not covered" >        console.error('this is a fetch error', error);</span>
+      });
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+    const isLoading = <span class="cstat-no" title="statement not covered" >this.state.isLoading;</span>
+    // if (this.state.isLoading) {
+    //   return (
+    //     &lt;section className="youtube-api"&gt;
+    //       &lt;Loader /&gt;
+    //     &lt;/section&gt;
+    //   );
+    // }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;section className="youtube-api"&gt;
+        &lt;Form inline onSubmit={this.onFormSubmit} &gt;
+          &lt;FormGroup controlId="formInlineSearch" &gt;
+            &lt;InputGroup&gt;
+              &lt;InputGroup.Addon&gt;
+                Watch YouTube:
+              &lt;/InputGroup.Addon&gt;
+              &lt;FormControl
+                type="text"
+                placeholder="Search for something..."
+                value={this.state.searchTerm}
+                onChange={this.handleSearchTermChange}
+              /&gt;
+              {' '}
+              &lt;InputGroup.Button&gt;
+                &lt;Button
+                  type="submit"
+                  bsStyle="primary"
+                  disabled={isLoading}
+                  onClick={!isLoading ? null : null}
+                &gt;
+                  {isLoading ? 'Loading...' : 'Search'}
+                &lt;/Button&gt;
+              &lt;/InputGroup.Button&gt;
+            &lt;/InputGroup&gt;
+          &lt;/FormGroup&gt;
+        &lt;/Form&gt;
+&nbsp;
+        &lt;div id="youtube-results" /&gt;
+        {this.state.data.map(<span class="fstat-no" title="function not covered" >it</span>em =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;div className="video-item" key={item.id.videoId} &gt;</span>
+            &lt;h5&gt;{item.snippet.title}&lt;/h5&gt;
+            {/*&lt;ResponsiveEmbed a16by9&gt;*/}
+            &lt;iframe className="video" title={item.snippet.title} src={`https://www.youtube.com/embed/${item.id.videoId}`} frameBorder="0" allowFullScreen /&gt;
+            {/*&lt;/ResponsiveEmbed&gt;*/}
+          &lt;/div&gt;
+          ),
+        )}
+      &lt;/section&gt;
+    );
+  }
+}
+&nbsp;
+export default YouTube;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 14 2018 19:26:01 GMT-0500 (EST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
