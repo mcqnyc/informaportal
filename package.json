@@ -30,9 +30,9 @@
     "morgan": "^1.8.1",
     "node-ensure": "0.0.0",
     "prop-types": "^15.5.8",
-    "react": "^15.4.2",
+    "react": "16",
     "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.4.2",
+    "react-dom": "16",
     "react-images": "^0.5.4",
     "react-loading": "0.0.9",
     "react-redux": "^5.0.2",
@@ -57,6 +57,7 @@
     "commitizen": "^2.9.5",
     "cz-conventional-changelog": "^1.2.0",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-loader": "^1.9.0",
@@ -71,9 +72,14 @@
     "webpack": "^3.0.0"
   },
   "jest": {
+    "snapshotSerializer": [
+      "jest-serializer-enzyme"
+    ],
     "testEnvironment": "jest-environment-node",
     "collectCoverageFrom": [
-      "**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
     ]
   },
   "config": {
