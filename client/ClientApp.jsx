@@ -9,11 +9,10 @@ import Login from '../components/Login';
 import Signup from '../components/Signup';
 import Footer from '../components/Footer';
 
-import '../public/styles/reset.css';
-import '../public/styles/bootstrap.css';
-// import '../public/styles/grid.css';
-import '../public/styles/style.css';
-import '../public/styles/queries.css';
+import '../styles/reset.css';
+import '../styles/bootstrap.css';
+import '../styles/style.css';
+import '../styles/queries.css';
 
 const App = () => (
   <Provider store={store}>
