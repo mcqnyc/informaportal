@@ -2,7 +2,6 @@ import React from 'react';
 import Time from 'react-time';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Link } from 'react-router-dom';
 import { Button, Pagination } from 'react-bootstrap';
 import { fetchNews } from '../actions/action-creators';
 import './News.css';
@@ -63,7 +62,7 @@ class News extends React.Component {
           {currentItems.map(item => (
             <li key={item.id} >
               <Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />:
-              <Link to={item.webUrl} target="_blank"> {item.webTitle}</Link>
+              <a href={item.webUrl} rel="noopener noreferrer" target="_blank"> {item.webTitle}</a>
             </li>
           ),
           )}
