@@ -1,0 +1,18 @@
+#landing {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
+}
+
+
+/*======================
+large screen sizes
+======================*/
+
+@media (min-width:1024px) {
+  #landing {
+    /* grid-column: col-start 1 / span 2; */
+    grid-template-columns: repeat(2, [col-start] 1fr);
+  }
+}

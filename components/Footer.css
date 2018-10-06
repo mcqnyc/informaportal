@@ -1,0 +1,47 @@
+/* section styling height override for footer-nav with Channels */
+.footer-nav {
+  width: 100%;
+  /* padding-bottom: 1em; */
+  padding: 0 1em 1em;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  border: coral 1px dotted;
+}
+
+
+/*#bootstrap-overrides {*/
+.channels {
+  /*column-count: 4;
+  column-width: 150px;*/
+  -webkit-columns: 4 150px;
+      -moz-columns: 4 150px;
+          columns: 4 150px;
+  -webkit-column-gap: 3rem;
+      -moz-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-column-rule: 1px solid #ccc;
+      -moz-column-rule: 1px solid #ccc;
+          column-rule: 1px solid #ccc;
+  /*column-fill: balance;*/
+  -webkit-column-fill: auto;
+      -moz-column-fill: auto;
+          column-fill: auto;
+}
+
+
+.channels li {
+  padding: 2px 5px;
+  letter-spacing: 1px;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 24px;
+  list-style: none;
+}
+
+.channels h3 {
+  padding: 10px 10px 10px 0;
+  font-size: 2em;
+  -webkit-column-span: all;
+      -moz-column-span: all;
+          column-span: all;
+}

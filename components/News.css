@@ -1,0 +1,8 @@
+#news-api {
+  border: 1px teal dashed;
+}
+
+#news-button-group {
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 1fr);
+}

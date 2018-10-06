@@ -27,35 +27,30 @@ body {
 
 /* ------------------------- */
 /* REUSABLE SELECTORS */
-/* ------------------------- */ 
+/* ------------------------- */
 
 /* section styling - creates boxes around content from apis */
 
 section {
   /*min-width: 310px;*/
-  flex: 1 1 310px;
-  max-width: 100%;
+  // flex: 1 1 310px;
+  width: 100%;
   /*max-height: 950px;*/
   /*overflow-y: scroll;*/
   padding: 0px 2px;
   /*margin: 0.1rem auto;*/
-  margin: .1% auto;
+  // margin: .1% auto;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   box-shadow: 1px 2px 2.5px #888;
 }
 
-/*
-.container {
-  border: 1px solid #f06d06;
-  margin: 0 .5em;
-}*/
 
 .row {
   /*max-width: 1140px;*/
   margin: 0 auto;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   justify-content: space-around;
   /*border: 3px solid green;*/
 }
@@ -111,7 +106,7 @@ a:active {
 }
 
 .pagination > li {
-  list-style: none;  
+  list-style: none;
   float: left;
   margin: 0 .5px;
   min-width : 27px;
@@ -203,146 +198,11 @@ a:active {
 
 
 
-/* ------------------------- */
-/* NAVBAR */
-/* ------------------------- */ 
-
-/* Remove the navbar's default margin-bottom and rounded borders */
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-  border: 0px;
-}
-
-.app {
-/* ensures nothing enters the space behind the floating navbar */
-  margin-top: 56px;
-}
-
-
-
-/* - - - - Navbar menu toggle - - - - */
-
-
-
-.navbar {
-  background-color: #fff;
-  /*box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);*/
-  box-shadow: 1px 2px 2.5px #888;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-width: 280px;
-  min-height: 56px;
-  max-height: 56px;
-  z-index: 9990;
-}
- 
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
- 
-.navbar li a {
-  display: block;
-  padding: 17px 20px;
-  border-right: 1px solid #f4f4f4;
-  border-left: 1px solid #f4f4f4;
-  text-decoration: none;
-}
- 
-.navbar li a:hover {
-  background-color: #f4f4f4;
-}
- 
-.navbar .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 7px 20px;
-  text-decoration: none;
-}
- 
-.navbar .menu,
-.navbar .menu-right {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
-
-.navbar .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
- 
-.navbar .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
- 
-.navbar .menu-icon .navicon:before,
-.navbar .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
- 
-.navbar .menu-icon .navicon:before {
-  top: 5px;
-}
- 
-.navbar .menu-icon .navicon:after {
-  top: -5px;
-}
-
-.navbar .menu-btn {
-  display: none;
-}
- 
-.navbar .menu-btn:checked ~ .menu,
-.navbar .menu-btn:checked ~ .menu-right {
-  max-height: 240px;
-}
- 
-.navbar .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
- 
-.navbar .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
- 
-.navbar .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
- 
-.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-
 
 
 /* ------------------------- */
 /* IMAGE SEARCH API */
-/* ------------------------- */ 
+/* ------------------------- */
 
 
 .image-search-api {
@@ -352,7 +212,7 @@ a:active {
 
 /* ------------------------- */
 /* YOUTUBE API */
-/* ------------------------- */ 
+/* ------------------------- */
 
 
 .youtube-api {
@@ -368,7 +228,7 @@ a:active {
 }
 
 .youtube-api .video {
-  height: 250px; 
+  height: 250px;
   width: 100%;
   max-height: 400px;
 }
@@ -392,7 +252,7 @@ div .video-item > h5 {
 
 /* ------------------------- */
 /* WEATHER API */
-/* ------------------------- */ 
+/* ------------------------- */
 
 
 
@@ -454,7 +314,7 @@ td:first-of-type, td:first-of-type > div {
 
 /* ------------------------- */
 /* NEWS API */
-/* ------------------------- */ 
+/* ------------------------- */
 
 .news-button-group {
   display: flex;
@@ -502,64 +362,10 @@ td:first-of-type, td:first-of-type > div {
 
 /* ---------------- */
 /*  AUTHENTICATION  */
-/* ---------------- */ 
+/* ---------------- */
 
 /* section styling height override for authentication pages (login.html & signup.html) */
 .auth {
   height: 16rem;
   max-width: 1140px;
-}
-
-
-/* ------------------------- */
-/*  BOTTOM NAV / FAT FOOTER  */
-/* ------------------------- */ 
-
-/* styling for bottom navbar */
-
-/*#bootstrap-overrides {*/
-.channels {
-  /*column-count: 4;
-  column-width: 150px;*/
-  -webkit-columns: 4 150px;
-     -moz-columns: 4 150px;
-          columns: 4 150px;
-  -webkit-column-gap: 3rem;
-     -moz-column-gap: 3rem;
-          column-gap: 3rem;
-  -webkit-column-rule: 1px solid #ccc;
-     -moz-column-rule: 1px solid #ccc;
-          column-rule: 1px solid #ccc;
-  /*column-fill: balance;*/
-  -webkit-column-fill: auto;
-     -moz-column-fill: auto;
-          column-fill: auto;
-}
-
-
-.channels li {
-  padding: 2px 5px;
-  letter-spacing: 1px;
-  text-align: left;
-  vertical-align: middle;
-  line-height: 24px;
-}
-
-.channels h3 {
-  padding: 10px 10px 10px 0;
-  font-size: 2em;
-  -webkit-column-span: all;
-     -moz-column-span: all;
-          column-span: all;
-}
-
-
-/* section styling height override for footer-nav with Channels */
-.footer-nav {
-  max-width: 1140px;
-  padding-bottom: 1em;
-  padding: 0 1em 1em;
-  margin: 0 auto;
-  margin-bottom: 0.5em;
-  /*margin: 7px 5px 5px;*/
 }
