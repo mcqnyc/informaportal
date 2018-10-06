@@ -1,6 +1,6 @@
 import React from 'react';
 import YouTube from './YouTube';
-import SearchBar from '../containers/SearchBar';
+import Weather from '../containers/Weather';
 import News from './News';
 // import SearchImages from '../containers/SearchImages';
 import './Landing.css';
@@ -12,7 +12,7 @@ const Landing = () => (
     </section>
 
     <section className="span-2-of-3">
-      <SearchBar />
+      <Weather />
       <News />
     </section>
   </div>
