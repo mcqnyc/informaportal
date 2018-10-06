@@ -3,7 +3,6 @@
 ======================================*/
 
 #client-app {
-  /* display: flex; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content;
@@ -13,8 +12,6 @@
   justify-content: center;
   min-height: 50vw;
   margin: 2px;
-  /* padding-top: 9em; */
-  border: red 1px solid;
 }
 
 /*======================
