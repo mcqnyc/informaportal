@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { Form, FormGroup, FormControl, Button, InputGroup } from 'react-bootstrap';
 import { fetchWeather } from '../actions/action-creators';
 import WeatherList from './WeatherList';
-import './Weather.css';
 
 class Weather extends React.Component {
   constructor(props) {

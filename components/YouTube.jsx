@@ -7,7 +7,6 @@ import {
   InputGroup,
   ResponsiveEmbed,
 } from 'react-bootstrap';
-import './YouTube.css';
 
 class YouTube extends React.Component {
   constructor(props) {

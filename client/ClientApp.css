@@ -10,8 +10,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
   justify-content: center;
-  min-height: 50vw;
+  /* min-height: 50vw; */
   margin: 2px;
+  margin-top: 4.5em;
 }
 
 /*======================

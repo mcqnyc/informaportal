@@ -2,8 +2,6 @@ import React from 'react';
 import YouTube from './YouTube';
 import Weather from '../containers/Weather';
 import News from './News';
-// import SearchImages from '../containers/SearchImages';
-import './Landing.css';
 
 const Landing = () => (
   <div id="landing">

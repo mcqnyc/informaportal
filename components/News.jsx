@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Button, Pagination } from 'react-bootstrap';
 import { fetchNews } from '../actions/action-creators';
-import './News.css';
 
 class News extends React.Component {
   constructor(props) {

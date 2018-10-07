@@ -1,5 +1,6 @@
 
-/* Remove the navbar's default margin-bottom and rounded borders */
+/* (Temporarily) Override the styles
+getting applied by BS */
 .navbar {
   margin-bottom: 0 !important;
   border-radius: 0 !important;
@@ -9,13 +10,9 @@
 
 
 /* - - - - Navbar menu toggle - - - - */
-
-
-
 .navbar {
   background-color: #fff;
-  /*box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);*/
-  box-shadow: 1px 2px 2.5px #888;
+  box-shadow: $box-shadow;
   position: fixed;
   top: 0;
   left: 0;

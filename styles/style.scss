@@ -1,7 +1,10 @@
-/*
-blue color: rgba(51, 122, 183,1.0);
-blue color: #337ab7;
-*/
+@import '_variables';
+@import '_Footer.scss';
+@import '_Landing.scss';
+@import '_Navbar.scss';
+@import '_News.scss';
+@import '_Weather.scss';
+@import '_YouTube.scss';
 
 /* ------------------------- */
 /* BASIC SETUP */
@@ -24,7 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-
 /* ------------------------- */
 /* REUSABLE SELECTORS */
 /* ------------------------- */
@@ -32,37 +34,30 @@ body {
 /* section styling - creates boxes around content from apis */
 
 section {
-  /*min-width: 310px;*/
-  // flex: 1 1 310px;
   width: 100%;
-  /*max-height: 950px;*/
-  /*overflow-y: scroll;*/
   padding: 0px 2px;
-  /*margin: 0.1rem auto;*/
-  // margin: .1% auto;
   border: 1px solid #e6e6e6;
-  border-radius: 5px;
-  box-shadow: 1px 2px 2.5px #888;
+  border-radius: $border-radius-4px;
+  box-shadow: $box-shadow;
+
+  &#news-api {
+    // border: 1px inset $hopbush;
+  }
+
+  &.weather-api {
+    // border: 2px groove $patina;
+  }
+
+  &.youtube-api {
+    // border: 4px ridge $venus;
+  }
+
+  &.footer-nav {
+    // border: 3px outset $nebula;
+  }
 }
 
-
-.row {
-  /*max-width: 1140px;*/
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /*border: 3px solid green;*/
-}
-
-
-/*.col-1,
-.col-2 {
-  min-width: 280px;
-  flex: 1;
-}*/
-
-
+// do I need this below?
 .pull-right {
   float: right !important;
 }
@@ -82,125 +77,17 @@ a:active {
   color: #183A57;
   padding-bottom: .25px;
   border-bottom: 2px solid;
-  /*text-decoration: underline;*/
 }
-
-
-
-
-
 
 
 /* ------------------------- */
 /* IMAGE SEARCH API */
 /* ------------------------- */
 
-
 .image-search-api {
   padding-top: 2px;
 }
 
-
-/* ------------------------- */
-/* YOUTUBE API */
-/* ------------------------- */
-
-
-.youtube-api {
-  padding-top: 2px;
-}
-
-.youtube-api h2 {
-  /*flex: 1.25;*/
-  text-align: center;
-  font-size: 1em;
-  line-height: 1em;
-  /*padding: 10px;*/
-}
-
-.youtube-api .video {
-  height: 250px;
-  width: 100%;
-  max-height: 400px;
-}
-
-div .video-item {
-  margin-bottom: 4px;
-  padding: 1px 0;
-  /*border: 1px solid #f4f4f4;*/
-  border-radius: 2px;
-  box-shadow: 1px 2px 2.5px #888;
-}
-
-div .video-item > h5 {
-  /*margin-bottom: 4px;*/
-  padding: 2px 2px;
-  /*padding: 2px 2px 0 1px;*/
-  /*border: 1px solid #f4f4f4;*/
-  /*border-radius: 2px;*/
-  /*box-shadow: 1px 2px 2.5px #888;*/
-}
-
-/* ------------------------- */
-/* WEATHER API */
-/* ------------------------- */
-
-
-
-.weather-api {
-  /*display: flex;*/
-  /*justify-content: center;*/
-  margin-bottom: 4px;
-  padding: 2px 0;
-  /*border-bottom: 1px solid red;*/
-}
-
-
-.search-weather-api,
-.search-weather-results {
-  display: flex;
-  justify-content: center;
-  /*border: 3px solid aqua;*/
-}
-
-
-.weather-api .form-group {
-  margin: 1px 1px;
-}
-
-
-.weather-result-row {
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  /*align-content: space-around;*/
-  max-width: 300px;
-  border-radius: 2px;
-  /*border: 4px solid #e6e6e6;*/
-  /*box-shadow: 2px 3px 3.5px #888;*/
-}
-
-/* this is for displaying the weather results */
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-td, th {
-  vertical-align: middle !important;
-  text-align: center !important;
-  /*border: 1px solid black;*/
-}
-
-svg {
-  height: 80px;
-}
-
-/* this is for sizing the Google Map */
-td:first-of-type, td:first-of-type > div {
-  height: 100px;
-  width: 100px;
-}
 
 
 /* ---------------- */
