@@ -1,0 +1,101 @@
+@import '_variables';
+@import '_Footer.scss';
+@import '_Landing.scss';
+@import '_Navbar.scss';
+@import '_News.scss';
+@import '_Weather.scss';
+@import '_YouTube.scss';
+
+/* ------------------------- */
+/* BASIC SETUP */
+/* ------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  color: #444;
+  font-family: Avenir, Helvetica Neue, Arial Black, sans;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* ------------------------- */
+/* REUSABLE SELECTORS */
+/* ------------------------- */
+
+/* section styling - creates boxes around content from apis */
+
+section {
+  width: 100%;
+  padding: 0px 2px;
+  border: 1px solid #e6e6e6;
+  border-radius: $border-radius-4px;
+  box-shadow: $box-shadow;
+
+  &#news-api {
+    // border: 1px inset $hopbush;
+  }
+
+  &.weather-api {
+    // border: 2px groove $patina;
+  }
+
+  &.youtube-api {
+    // border: 4px ridge $venus;
+  }
+
+  &.footer-nav {
+    // border: 3px outset $nebula;
+  }
+}
+
+// do I need this below?
+.pull-right {
+  float: right !important;
+}
+
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+  color: #337ab7;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+a:hover,
+a:active {
+  color: #183A57;
+  padding-bottom: .25px;
+  border-bottom: 2px solid;
+}
+
+
+/* ------------------------- */
+/* IMAGE SEARCH API */
+/* ------------------------- */
+
+.image-search-api {
+  padding-top: 2px;
+}
+
+
+
+/* ---------------- */
+/*  AUTHENTICATION  */
+/* ---------------- */
+
+/* section styling height override for authentication pages (login.html & signup.html) */
+.auth {
+  height: 16rem;
+  max-width: 1140px;
+}

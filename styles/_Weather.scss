@@ -1,0 +1,41 @@
+.weather-api {
+  margin-bottom: 4px;
+  padding: 2px 0;
+}
+
+.search-weather-api,
+.search-weather-results {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-api .form-group {
+  margin: 1px 1px;
+}
+
+.weather-result-row {
+  max-width: 300px;
+  border-radius: $border-radius-4px;
+}
+
+/* this is for displaying the weather results */
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+svg {
+  height: 80px;
+}
+
+/* this is for sizing the Google Map */
+td:first-of-type, td:first-of-type > div {
+  height: 100px;
+  width: 100px;
+}
