@@ -2,7 +2,6 @@ import React from 'react';
 import Time from 'react-time';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Link } from 'react-router-dom';
 import { Button, Pagination } from 'react-bootstrap';
 import { fetchNews } from '../actions/action-creators';
 
@@ -14,13 +13,15 @@ class News extends React.Component {
     // this.handleClick = this.handleClick.bind(this);
     this.convertTheTimestamp = this.convertTheTimestamp.bind(this);
 
-    this.props.fetchNews();
-
     this.state = {
       news: [],
       isLoading: false,
       activePage: 1,
     };
+  }
+
+  componentDidMount() {
+    this.props.fetchNews();
   }
 
   convertTheTimestamp(webPublicationDate) {
@@ -45,9 +46,9 @@ class News extends React.Component {
     const currentItems = news.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
-      <section className="news-api">
-        <div className="news-button-group">
-          <h2>Fashion News</h2>
+      <section id="news-api">
+        <div id="news-button-group">
+          <h4>Fashion News</h4>
           <Button
             bsStyle="primary"
             disabled={isLoading}
@@ -60,23 +61,25 @@ class News extends React.Component {
           {currentItems.map(item => (
             <li key={item.id} >
               <Time value={this.convertTheTimestamp(item.webPublicationDate)} format="MMM DD,HH:mm" />:
-              <Link to={item.webUrl} target="_blank"> {item.webTitle}</Link>
+              <a href={item.webUrl} rel="noopener noreferrer" target="_blank"> {item.webTitle}</a>
             </li>
           ),
           )}
         </ul>
-        <Pagination
-          prev
-          next
-          first
-          last
-          ellipsis={false}
-          boundaryLinks
-          items={10}
-          maxButtons={3}
-          activePage={this.state.activePage}
-          onSelect={this.handleSelect}
-        />
+        <div id="news-pagination">
+          <Pagination
+            prev
+            next
+            first
+            last
+            ellipsis={false}
+            boundaryLinks
+            items={10}
+            maxButtons={3}
+            activePage={this.state.activePage}
+            onSelect={this.handleSelect}
+          />
+        </div>
       </section>
     );
   }

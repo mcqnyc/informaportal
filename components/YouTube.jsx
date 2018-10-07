@@ -1,5 +1,12 @@
 import React from 'react';
-import { Form, FormGroup, FormControl, Button, InputGroup, ResponsiveEmbed } from 'react-bootstrap';
+import {
+  Form,
+  FormGroup,
+  FormControl,
+  Button,
+  InputGroup,
+  ResponsiveEmbed,
+} from 'react-bootstrap';
 
 class YouTube extends React.Component {
   constructor(props) {
@@ -102,7 +109,13 @@ class YouTube extends React.Component {
           <div className="video-item" key={item.id.videoId} >
             <h5>{item.snippet.title}</h5>
             {/*<ResponsiveEmbed a16by9>*/}
-            <iframe className="video" title={item.snippet.title} src={`https://www.youtube.com/embed/${item.id.videoId}`} frameBorder="0" allowFullScreen />
+            <iframe
+              className="video"
+              title={item.snippet.title}
+              src={`https://www.youtube.com/embed/${item.id.videoId}`}
+              frameBorder="0"
+              allowFullScreen
+            />
             {/*</ResponsiveEmbed>*/}
           </div>
           ),

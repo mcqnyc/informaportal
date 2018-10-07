@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Form, FormGroup, FormControl, Button, InputGroup } from 'react-bootstrap';
 import { fetchWeather } from '../actions/action-creators';
-import WeatherList from '../containers/WeatherList';
+import WeatherList from './WeatherList';
 
-class SearchBar extends React.Component {
+class Weather extends React.Component {
   constructor(props) {
     super(props);
 
@@ -66,4 +66,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchWeather }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(null, mapDispatchToProps)(Weather);
