@@ -1,5 +1,5 @@
 {
-  "name": "omnichanne1-react",
+  "name": "informaportal",
   "version": "1.0.0",
   "description": "An application that presents information from different APIs in one place using React on the front-end.",
   "main": "index.js",
